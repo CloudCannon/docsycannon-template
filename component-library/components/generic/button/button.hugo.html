@@ -1,0 +1,7 @@
+{{ $icon := .icon }}
+{{ $size := .size }}
+{{ $type := .type }}
+{{ $url := .url }}
+<a class="btn btn-{{ $type }} btn-{{ $size }} mx-3 mb-4 mt-4" href="{{ $url }}">
+    {{ .text }} <i class="{{ $icon }} ml-2"></i>
+</a>

@@ -1,0 +1,12 @@
+breadcrumb_disable: false
+taxonomy_breadcrumb_disable: false
+readingtime: false
+page_meta_links_disabled: false
+feedback:
+  enable: true
+  yes_message: >-
+    Glad to hear it! Please tell us [how we can
+    improve](https://github.com/USERNAME/REPOSITORY/issues/new).
+  no_message: >-
+    Sorry to hear that. Please tell us [how we can
+    improve](https://github.com/USERNAME/REPOSITORY/issues/new).

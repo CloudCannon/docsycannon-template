@@ -1,0 +1,57 @@
+<section class="td-box--gradient td-box--height-auto linkbox">
+    <div class="container row mx-auto">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        {{ with .left.left_heading }}
+            <h2>{{ . }}</h2>
+        {{ end }}
+        {{ with .left.left_sub_heading }}
+            <p>{{ . }}</p>
+        {{ end }}
+        {{ with .left.links }}
+            <ul>
+                {{ range . }}
+                    <li title="{{ .name }}">
+                        <a target="_blank" rel="noopener" href="{{ .url }}"><i class="{{ .icon }}"></i> {{ .name }}:</a>
+                        {{ .desc }}
+                    </li>
+                {{ end }}
+            </ul>
+        {{ end }}
+        {{ with .left.conclusion }}         
+            <p>{{ .conclusion_text }} <a href="{{ .conclusion_link }}">{{ .conclusion_link_text }}</a></p>
+        {{ end }}
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        {{ with .right.right_heading }}
+         <h2>{{ . }}</h2>
+        {{ end }}
+        {{ with .right.right_sub_heading }}
+            <p>{{ . }}</p>
+        {{ end }}
+        {{ with .right.links }}
+            <ul>
+                {{ range . }}
+                    <li title="{{ .name }}">
+                        <a target="_blank" rel="noopener" href="{{ .url }}"><i class="{{ .icon }}"></i> {{ .name }}:</a>
+                        {{ .desc }}
+                    </li>
+                {{ end }}
+            </ul>
+        {{ end }}
+        {{ with .right.conclusion }}         
+            <p>{{ .conclusion_text }} <a href="{{ .conclusion_link }}">{{ .conclusion_link_text }}</a></p>
+        {{ end }}
+    </div>
+</div>
+</section>
+
+{{ define "community-links-list" }}
+<ul>
+    {{ range . }}
+    <li title="{{ .name }}">
+        <a target="_blank" rel="noopener" href="{{ .url }}"><i class="{{ .icon }}"></i> {{ .name }}:</a>
+        {{ .desc }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

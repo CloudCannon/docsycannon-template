@@ -1,0 +1,46 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+  label: "link_down"
+  description: An arrow linking to a section with an id.
+  icon: expand_more
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  color: warning
+  id: section
+  
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  color: warning
+  id: section
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  color:
+    label: Color
+    comment: Select a color
+    type: select
+    options:
+      values:
+        - primary
+        - secondary
+        - success
+        - info
+        - warning
+        - danger
+        - white
+        - light
+        - dark
+        - blue
+        - orange
+        - gray
+        - black
+  id:
+    label: ID
+    comment: Enter an id to link to. Must add an id to the section or lead component to be linked to.
+    type: text
+  
+
+

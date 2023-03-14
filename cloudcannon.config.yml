@@ -1,0 +1,855 @@
+# Read the CloudCannon documentation for more information on how to use this file:
+# https://cloudcannon.com/documentation/articles/setting-global-configuration/?ssg=Hugo
+
+_editables: &md_editables
+  text:
+    italic: true
+  block:
+    format: p h3
+    undo: true
+    redo: true
+  content:
+    blockquote: true
+    bold: true
+    format: p h1 h2 h3 h4 h5 h6 pre address div
+    italic: true
+    strike: true
+    subscript: true
+    superscript: true
+    underline: true
+    link: true
+    bulletedlist: true
+    indent: true
+    numberedlist: true
+    outdent: true
+    code: true
+    embed: true
+    horizontalrule: true
+    image: true
+    table: true
+    undo: true
+    redo: true
+    removeformat: true
+    copyformatting: true
+    left: align-left
+    center: align-center
+    right: align-right
+    justify: align-justify
+    image_size_attributes: true
+    snippet: true
+
+_snippets:
+  alert:
+    template: hugo_paired_shortcode_named_args
+    inline: true
+    definitions:
+      shortcode_name: alert
+      content_key: message
+      named_args:
+        - source_key: color
+          editor_key: color
+          default: danger
+          optional: true
+          remove_empty: true
+          type: string
+          allowed_values: &css_colors
+            - primary
+            - secondary
+            - success
+            - info
+            - warning
+            - danger
+            - white
+            - light
+            - dark
+            - blue
+            - orange
+            - gray
+            - black
+        - source_key: title
+          editor_key: title
+          optional: true
+          remove_empty: true
+          type: string
+    preview:
+      text: 
+        - key: title
+        - An alert
+      subtext:
+        - key: message
+        - No text defined
+      icon: warning
+    picker_preview:
+      text: Alert
+      subtext: An alert with color options
+      icon: warning
+      gallery: 
+        image: /preview-images/alert.png
+        text: An alert with color options
+    _inputs:
+      color:
+        type: select
+        options:
+          values: *css_colors
+      message:
+        label: Alert Message
+        comment: The content of your alert message.
+        type: text
+        options:
+          empty_type: string
+      title:
+        label: Alert Title
+        comment: The title of your alert message.
+        type: text
+        options:
+          empty_type: string
+
+  pageinfo:
+    template: hugo_paired_markdown_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: pageinfo
+      content_key: message
+      named_args:
+        - source_key: color
+          editor_key: color
+          default: primary
+          optional: true
+          remove_empty: true
+          type: string
+          allowed_values: *css_colors
+    preview:
+      text:
+        - key: message
+        - Page Info
+      subtext:
+        - key: color
+        - No color defined
+      icon: info
+    picker_preview:
+      text: Page Info
+      subtext: A banner to display page info.
+      icon: info
+      gallery: 
+        image: /preview-images/pageinfo.png
+        text: A banner to display page info.
+    _inputs:
+      color:
+        type: select
+        options:
+          values: *css_colors
+      message:
+        label: Message
+        comment: The message to display.
+        type: text
+        options:
+          empty_type: string
+  
+  card:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: card
+      content_key: message
+      named_args:
+        - source_key: header
+          editor_key: header
+          optional: true
+          remove_empty: true
+        - source_key: title
+          editor_key: title
+          optional: true
+          remove_empty: true
+          type: string
+        - source_key: subtitle
+          editor_key: subtitle
+          optional: true
+          remove_empty: true
+          type: string
+        - source_key: footer
+          editor_key: footer
+          optional: true
+          remove_empty: true
+          type: string
+    preview:
+      text:
+        - key: title
+        - Card
+      subtext:
+        - key: subtitle
+        - key: message
+        - No text defined
+      icon: tab
+    picker_preview:
+      text: Card
+      subtext: A basic card
+      icon: tab
+      gallery: 
+        image: /preview-images/card.png
+        text: A basic card
+    _inputs:
+      message:
+        label: Card Content
+        comment: The content of the card.
+        type: markdown
+        options: *md_editables
+      header:
+        label: Header
+        comment: The card header.
+        type: text
+        options:
+          empty_type: string
+      title:
+        label: Title
+        comment: The card title.
+        type: text
+        options:
+          empty_type: string
+      subtitle:
+        label: Subtitle
+        comment: The card subtitle.
+        type: text
+        options:
+          empty_type: string
+      footer:
+        label: Footer
+        comment: The card footer.
+        type: text
+        options:
+          empty_type: string
+
+  cardpane:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: cardpane
+      content_key: card
+    preview:
+      text: Card Pane
+      subtext:
+        - A wrapper used to display multiple cards
+      icon: dashboard
+    picker_preview:
+      text: Card Pane
+      subtext: A wrapper for cards to be displayed next to each other
+      icon: dashboard
+      gallery: 
+        image: /preview-images/cardpane.png
+        text: A wrapper for cards to be displayed next to each other
+    _inputs:
+      card:
+        label: Cards
+        comment: Add individual cards to occupy this card pane
+        type: markdown
+        options:
+          empty_type: string
+          snippet: true
+    
+  tab:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: tab
+      content_key: content
+      named_args:
+        - source_key: header
+          editor_key: header
+          optional: true
+          remove_empty: true
+          type: string
+        - source_key: lang
+          editor_key: lang
+          optional: true
+          remove_empty: true
+          type: string
+        - source_key: disabled
+          editor_key: disabled
+          optional: true
+          remove_empty: true
+          type: boolean
+    preview:
+      text: 
+        - key: header
+        - No header defined
+      subtext:
+        - key: content
+        - No content defined
+      icon: tab
+    picker_preview:
+      text: Tab
+      subtext: A tab to be used inside a tabpane wrapper
+      icon: tab
+      gallery: 
+        image: /preview-images/tabpane.png
+        text: A tab to be used inside a tabpane wrapper
+    _inputs:
+      content:
+        label: Tab Content
+        comment: The content of the tab
+        type: markdown
+        options:
+          empty_type: string
+          blockquote: true
+          bold: true
+          format: p h1 h2 h3 h4 h5 h6 pre address div
+          italic: true
+          strike: true
+          subscript: true
+          superscript: true
+          underline: true
+          link: true
+          bulletedlist: true
+          indent: true
+          numberedlist: true
+          outdent: true
+          code: true
+          embed: true
+          horizontalrule: true
+          image: true
+          table: true
+          undo: true
+          redo: true
+          removeformat: true
+          copyformatting: true
+          left: align-left
+          center: align-center
+          right: align-right
+          justify: align-justify
+          image_size_attributes: true
+      header:
+        label: Tab Header
+        comment: The header for this individual tab
+        type: text
+        options:
+          empty_type: string
+      lang:
+        label: Language
+        comment: The language to be used for syntax highlighting in this tab. This field can be left blank if 'Header Specifies Language' is true in Tab Pane.
+        type: text
+        options:
+          empty_type: string
+      disabled:
+        label: Disabled
+        comment: Disable this tab to make it unclickable
+        type: checkbox
+        
+  tabpane:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: tabpane
+      content_key: tab
+      named_args:
+        - source_key: text
+          editor_key: text
+          optional: false
+          remove_empty: false
+          type: boolean
+        - source_key: right
+          editor_key: right
+          optional: true
+          remove_empty: true
+          type: boolean
+          default: true
+        - source_key: langEqualsHeader
+          editor_key: langEqualsHeader
+          optional: true
+          remove_empty: true
+          type: boolean
+          default: false
+        - source_key: persistLang
+          editor_key: persistLang
+          optional: true
+          remove_empty: true
+          type: boolean
+    preview:
+      text: Tab Pane
+      subtext: Wraps a group of tabs
+      icon: dashboard
+    picker_preview:
+      text: Tab Pane
+      subtext: A set of tabs
+      icon: dashboard
+      gallery: 
+        image: /preview-images/tabpane.png
+        text: A set of tabs
+    _inputs:
+      tab:
+        label: Tabs
+        comment: Add tabs to the tabpane.
+        type: markdown
+        options:
+          empty_type: string
+          snippet: true
+      text:
+        label: Text
+        comment: If the contents of your tabs should be rendered as plain text rather than code.
+        type: checkbox
+      right:
+        label: Right Align
+        comment: Align the tabs to the right of the tabpane
+        type: checkbox
+      langEqualsHeader:
+        label: Header Specifies Language
+        comment: If the header of each tab is the programming language to be used for syntax highlighting in the tab contents. Language can also be specified inside each tab independently to tab header.
+        type: checkbox
+      persistLang:
+        label: Persist Language
+        comment: By default, the language of the selected tab is stored and preserved between different browser sessions. If the content length within your tabs differs greatly, this may lead to unwanted scrolling when switching between tabs. To disable this unwanted behaviour, check False.
+        type: checkbox
+
+  iframe:
+    template: hugo_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: iframe
+      named_args:
+        - source_key: src
+          editor_key: src
+          optional: false
+          type: string
+        - source_key: width
+          editor_key: width
+          optional: true
+          remove_empty: true
+          type: string
+          default: 80%
+        - source_key: tryautoheight
+          editor_key: tryautoheight
+          optional: true
+          type: boolean
+          default: false
+        - source_key: style
+          editor_key: style
+          optional: true
+          remove_empty: true
+          type: string
+          default: min-height:98vh; border:none;
+        - source_key: sandbox
+          editor_key: sandbox
+          optional: true
+          remove_empty: true
+          type: boolean 
+          default: false
+        - source_key: name
+          editor_key: name
+          optional: true
+          remove_empty: true
+          type: string 
+        - source_key: id
+          editor_key: id
+          optional: true
+          remove_empty: true
+          type: string 
+        - source_key: sub
+          editor_key: sub
+          optional: true
+          remove_empty: true
+          type: string
+          default: "Your browser cannot display embedded frames. You can access the embedded page via the following link:"
+    preview:
+      text: iframe
+      subtext:
+        - Embed a webpage on the page
+      icon: dashboard
+    picker_preview:
+      text: iframe
+      subtext: Embed a site on the page
+      icon: dashboard
+      gallery: 
+        image: /preview-images/iframe.png
+        text: Embed a site on the page
+    _inputs:
+      src:
+        label: Source
+        comment: The URL of the site to be used in the iframe.
+        type: url
+      width:
+        label: Width
+        comment: The width of the iframe on the page. Accepts any CSS value.
+        type: text
+        options:
+          empty_type: string
+      tryautoheight:
+        label: Auto Height
+        comment: If true the shortcode tries to calculate the needed height for the embedded content using JavaScript. Only possible if the embedded content is on the same domain.
+        type: switch
+      style:
+        label: Style
+        comment: CSS styles for the iframe. min-height:98vh; is a backup if Auto Height doesn’t work. border:none; removes the border from the iframe.
+        type: text
+        options:
+          empty_type: stringarea
+      sandbox:
+        label: Sandbox
+        comment: Switch the sandbox completely on
+        type: checkbox
+      name:
+        label: Name
+        comment: Specify the name of the iframe.
+        type: text
+        options:
+          empty_type: string
+      id:
+        label: ID
+        comment: Set the ID of the iframe.
+        type: text
+        options:
+          empty_type: string
+      sub:
+        label: Sub
+        comment: The text displayed (in addition to the embedded URL) if the user’s browser can’t display embedded frames.
+        type: text
+        options:
+          empty_type: stringarea
+
+  swaggerui:
+    template: hugo_shortcode_named_args
+    inline: false
+    definitions:
+      shortcode_name: swaggerui
+      named_args:
+        - source_key: src
+          editor_key: src
+          optional: false
+          type: string
+    preview:
+      text: Swagger UI
+      subtext:
+        - Placed inside a page with the `swagger` layout, this will render Swagger UI using any OpenAPI YAML or JSON file as source.
+      icon: description
+    picker_preview:
+      text: Swagger UI
+      subtext: Placed inside a page with the `swagger` layout, this will render Swagger UI using any OpenAPI YAML or JSON file as source.
+      icon: description
+      gallery: 
+        image: /preview-images/swaggerui.png
+        text: Placed inside a page with the `swagger` layout, this will render Swagger UI using any OpenAPI YAML or JSON file as source.
+    _inputs:
+      src:
+        label: Source
+        comment: The OpenAPI YAML or JSON file used as the source file.
+        type: file  
+
+# Collections are related sets of content files, typically grouped by folder.
+# Here you can define your collections, as well as any
+# CloudCannon configuration specific to those collections.
+collections_config:
+  pages:
+    output: true
+    path: content/en
+    icon: home
+    _enabled_editors:
+      - visual
+      - content
+    text_key: title
+    subtext_key: linkTitle
+    description: Collection of pages.
+    disable_add_folder: true
+    add_options:
+      - name: Page
+        base_path: /
+        schema: default
+    schemas:
+      default:
+        path: schemas/page.md
+        create:
+          path: '{title|slugify}/_index.md'
+  blog:
+    path: content/en/blog
+    output: true
+    icon: auto_stories
+    text_key: title
+    subtext_key: date
+    description: Collection of blog posts.
+    disable_add_folder: true
+    schemas:
+      default:
+        path: schemas/blog/post.md
+        name: Blog Post
+      post_list:
+        path: schemas/blog/post_list.md
+        name: Post Index Page
+        create:
+          path: '[relative_base_path]/{title|slugify}/_index.md'
+    _enabled_editors:
+      - content
+      - visual
+  docs:
+    path: content/en/docs
+    output: true
+    icon: description
+    text_key: title
+    subtext_key: description
+    description: The documentation section.
+    disable_add_folder: true
+    schemas:
+      default:
+        name: Docs Page
+        path: schemas/docs/default.md
+      index:
+        name: Docs Section
+        path: schemas/docs/default.md
+        create:
+          path: '[relative_base_path]/{title|slugify}/_index.md'
+    _enabled_editors:
+      - content
+      - visual
+  data:
+    path: data
+    icon: save
+    text_key: name
+    description: Configure the sites data.
+    disable_add: true
+    disable_add_folder: true
+    documentation:
+      url: "https://example.com/documentation/"
+      text: Read more about your data collection
+    _enabled_editors:
+      - data
+    _inputs:
+      title:
+        label: Title
+        comment: The title to use for the navbar and site head.
+        type: text
+        options:
+          empty_type: string
+      navbar:
+        label: Navbar
+        comment: Configure site navbar settings.
+      navbar_logo:
+        label: Navbar Logo
+        comment: Turn on to enable logo in the top left of the navbar.
+        type: switch
+      navbar_logo_path:
+        label: Navbar Logo Path
+        comment: Link to your logo, anywhere in the sites static folder.
+        type: image
+      navbar_translucent_over_cover_disable:
+        label: Translucent Nav
+        comment: Turn on to make navbar translucent when the first item on the page is a "Cover" Bookshop component.
+        type: switch
+      footer:
+        label: Footer
+        comment: Configure site footer settings.
+      copyright:
+        label: Copyright
+        comment: The name to be included in the copyright statement in the footer 
+        type: text
+        options:
+          empty_type: string
+      privacy_policy:
+        label: Privacy Policy
+        comment: The page to be linked to containing your privacy policy. 
+        type: url
+      footer_about_disable:
+        label: Footer "About" Link
+        comment: Turn on to disable the link to the "About" page in the footer.
+        type: switch
+      versioning:
+        label: Versioning
+        comment: Set up a versioning system for your documentation. More info [here](https://www.docsy.dev/docs/adding-content/versioning/).
+      version_menu:
+        label: Version Menu Name
+        comment: If versions are enabled, this is the name of the version drop-down menu.
+        type: text
+        options:
+          empty_type: string
+      versions:
+        label: Versions
+        comment: An array of all versions of the site. When versions are added here, a dropdown will appear in the navbar.
+        type: array
+      version:
+        label: Version
+        comment: The version name.
+        type: text
+        options:
+          empty_type: string
+      url:
+        label: Version URL
+        comment: The link to the version.
+        type: url
+      current_version:
+        label: Current Version
+        comment: Sets the version, contained in your versions list that will be the default version when users navigate to your site.
+        type: text
+        options:
+          empty_type: string
+      version_menu_pagelinks:
+        label: Version Menu Pagelinks
+        comment: If this is on, then links in the version drop-down menu point to the current page in the other version, instead of the main page.
+        type: switch
+      archived_version:
+        label: Archived Version Banner
+        comment: "Turned on, this adds a note at the top of every page in the archived docs to let readers know that they’re seeing an unmaintained snapshot."
+        type: switch
+      url_latest_version:
+        label: Latest Version Link
+        comment: A link to the latest version inside Archived Version Banner when on.
+        type: url
+      github:
+        label: GitHub
+        comment: For more information, read [here](https://www.docsy.dev/docs/adding-content/repository-links/).
+      github_repo:
+        label: Github Repository
+        comment: "The URL for your site’s source repository. This is used to generate the Edit this page, Create child page, and Create documentation issue links."
+        type: url
+      github_project_repo:
+        label: Seperate Project Repo
+        comment: "Specify a value here if you have a separate project repo and you’d like your users to be able to create issues against your project from the relevant docs. The Create project issue link appears only if this is set."
+        type: url
+      github_subdir:
+        label: Github Sub Directory
+        comment: "Specify a value here if your content directory is not in your repo’s root directory. For example, a site that is in the 'userguide' subdirectory of its repo would specify 'userguide'. Setting this value means that your edit links will go to the right page."
+        type: text
+        options:
+          empty_type: string
+      github_branch:
+        label: Github Branch
+        comment: Specify a value here if you have would like to reference a branch in your repository that is not the "main" for the other github settings like Edit this page or Create project issue.
+        type: text
+        options:
+          empty_type: string
+      search:
+        label: Search
+        comment: Configure search options for your site. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#site-search-options).
+      gcs_engine_id:
+        label: Google Custom Search Engine ID
+        comment: "The default search option, which uses Google’s index of your public site to generate a search results page. If you don’t specify a Google Custom Search Engine ID for your project and haven’t enabled any other search options, the search box won’t appear in your site. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#configure-search-with-a-google-custom-search-engine)."
+        type: text
+        options:
+          empty_type: string
+      algolia_docsearch:
+        label: Algolia DocSearch
+        comment: As an alternative to GCSE, you can use [Algolia DocSearch](https://docsearch.algolia.com/) with this theme. Algolia DocSearch is free for public documentation sites. Docsy supports Algolia DocSearch v3. Remove GCSE ID, Local Search set to false, and disable the sidebar search. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#configure-algolia-docsearch).
+        type: switch
+      user_interface:
+        label: User Interface
+        comment: Configure the UI on content pages.
+      breadcrumb_disable:
+        label: Breadcrumbs
+        comment: Turn on to disable breadcrumbs in documentation section.
+        type: switch
+      taxonomy_breadcrumb_disable:
+        label: Taxonomy Breadcrumbs
+        comment: Turn on to disable breadcrumbs on the Taxonomy page.
+        type: switch
+      page_meta_links_disabled:
+        label: Page Meta Links
+        comment: Turn on to disable page meta links in the sidebar of docs and blog sections.
+        type: switch
+      readingtime:
+        label: Reading Time
+        comment: Turn on to enable reading time indicators at the top of content pages.
+        type: switch
+      feedback:
+        label: Feedback
+        comment: Enable feedback for your content pages.
+      enable:
+        label: Enable Feedback
+        comment: Turn on to enable feedback buttons at the bottom of content pages. Used in conjunction with Google Analytics.
+        type: switch
+      yes_message:
+        label: Yes Message
+        comment: "The message displayed when a user selects 'Yes'" 
+        type: markdown
+      no_message:
+        label: No Message
+        comment: "The message displayed when a user selects 'No'" 
+        type: markdown
+      sidebar:
+        label: Sidebar Settings
+        comment: Configure the sidebar in docs and blog pages. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#section-menu)
+      sidebar_menu_foldable:
+        label: Foldable Sidebar Menu
+        comment: Make the sidebar menu foldable by turning this on.
+        type: switch
+      sidebar_cache_limit:
+        label: Sidebar Cache Limit
+        comment: On large sites (default is 2000 pages) the section menu is not generated for each page, but cached for the whole section. The HTML classes for marking the active menu item (and menu path) are then set using JS. You can adjust the limit for activating the cached section here.
+        type: number
+      sidebar_search_disable:
+        label: Sidebar Search Disabled
+        comment: Turn on to disable sidebar search input. This must be turned on if using Algolia DocSearch.
+        type: switch
+      sidebar_menu_truncate:
+        label: Sidebar Menu Truncate
+        comment: The upper limit for how many pages are displayed in the sidebar menu.
+        type: number
+      sidebar_menu_compact:
+        label: Sidebar Menu Compact
+        comment: "Turn on to show only current page’s ancestors, siblings and direct descendants in sidebar menu. By default, the section menu shows the current section fully expanded all the way down."
+        type: switch
+      colors:
+        comment: Customize the sites colors here.
+      primary:
+        type: color
+      secondary:
+        type: color
+      success:
+        type: color
+      info:
+        type: color
+      warning:
+        type: color
+      danger:
+        type: color
+      white:
+        type: color
+      light:
+        type: color
+      dark:
+        type: color
+      blue:
+        type: color
+      orange:
+        type: color
+      gray:
+        type: color
+      black:
+        type: color
+      links:
+        type: color
+
+# Control which collections are displayed in the CloudCannon site navigation,
+# and how those collections are grouped.
+collection_groups:
+
+# Set this to true to disable auto-detection of collections.
+collections_config_override: false
+
+# Control which data sets are available to populate select and multiselect inputs.
+data_config:
+
+# Base path to your source files, relative to the root folder of your repository.
+source:
+
+# The locations of various types of files within your site.
+# Each path is relative to your site's source folder.
+paths:
+  data: data
+  collections: content
+  includes: layouts
+  layouts: layouts
+  static: static
+  uploads: static
+  source:
+  archetypes: archetypes
+  assets: assets
+  content: content/en
+  pages: content/en
+  publish: public
+  config:
+
+# Lets you control the look and behaviour of the Source Editor.
+source_editor:
+
+# Timezone of your site in IANA format. This is used by date and datetime inputs
+# within the CloudCannon Data Editor.
+timezone: Etc/UTC
+
+_inputs:
+  weight:
+    label: Weight
+    comment: Sets the weight of the menu item. The higher the weight, the further down the menu item is.
+    type: number

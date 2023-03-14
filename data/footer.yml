@@ -1,0 +1,30 @@
+copyright: The Docsy Author
+privacy_policy: https://policies.google.com/privacy
+footer_about_disable: false
+footer_links:
+  user:
+    - name: User mailing list
+      url: 'https://example.org/mail'
+      icon: fa fa-envelope
+      desc: Discussion and help from your fellow users
+    - name: Twitter
+      url: 'https://example.org/twitter'
+      icon: fab fa-twitter
+      desc: Follow us on Twitter to get the latest news!
+    - name: Stack Overflow
+      url: 'https://example.org/stack'
+      icon: fab fa-stack-overflow
+      desc: Practical questions and curated answers
+  developer:
+    - name: GitHub
+      url: 'https://github.com/google/docsy'
+      icon: fab fa-github
+      desc: Development takes place here!
+    - name: Slack
+      url: 'https://example.org/slack'
+      icon: fab fa-slack
+      desc: Chat with other project developers
+    - name: Developer mailing list
+      url: 'https://example.org/mail'
+      icon: fa fa-envelope
+      desc: Discuss development issues around the project

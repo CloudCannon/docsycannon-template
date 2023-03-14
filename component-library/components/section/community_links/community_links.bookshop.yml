@@ -1,0 +1,98 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Community Links"
+  description: A section to list links to related pages.
+  icon: people
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  left:
+    left_heading: Left
+    left_sub_heading: Left sub
+    links:
+      - name: User mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discussion and help from your fellow users
+      - name: Twitter
+        url: 'https://example.org/twitter'
+        icon: fab fa-twitter
+        desc: Follow us on Twitter to get the latest news!
+      - name: Stack Overflow
+        url: 'https://example.org/stack'
+        icon: fab fa-stack-overflow
+        desc: Practical questions and curated answers
+    conclusion:
+      conclusion_text:
+      conclusion_link:
+      conclusion_link_text:
+  right:
+    right_heading: Right
+    right_sub_heading: Right
+    conclusion:
+      conclusion_text:
+      conclusion_link:
+      conclusion_link_text:
+    links:
+      - name: GitHub
+        url: 'https://github.com/google/docsy'
+        icon: fab fa-github
+        desc: Development takes place here!
+      - name: Slack
+        url: 'https://example.org/slack'
+        icon: fab fa-slack
+        desc: Chat with other project developers
+      - name: Developer mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discuss development issues around the project
+
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  left:
+    left_heading: Left
+    left_sub_heading: Left sub
+    links:
+      - name: User mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discussion and help from your fellow users
+      - name: Twitter
+        url: 'https://example.org/twitter'
+        icon: fab fa-twitter
+        desc: Follow us on Twitter to get the latest news!
+      - name: Stack Overflow
+        url: 'https://example.org/stack'
+        icon: fab fa-stack-overflow
+        desc: Practical questions and curated answers
+    conclusion:
+      conclusion_text: ""
+      conclusion_link: ""
+      conclusion_link_text: ""
+  right:
+    right_heading: Right
+    right_sub_heading: Right
+    conclusion:
+      conclusion_text: ""
+      conclusion_link: ""
+      conclusion_link_text: ""
+    links:
+      - name: GitHub
+        url: 'https://github.com/google/docsy'
+        icon: fab fa-github
+        desc: Development takes place here!
+      - name: Slack
+        url: 'https://example.org/slack'
+        icon: fab fa-slack
+        desc: Chat with other project developers
+      - name: Developer mailing list
+        url: 'https://example.org/mail'
+        icon: fa fa-envelope
+        desc: Discuss development issues around the project
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:

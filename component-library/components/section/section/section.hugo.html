@@ -1,0 +1,39 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $col_id := .color | default "primary" }}
+{{ $height := .height | default "auto"  }}
+{{ $type := .type }}
+{{ $id := .id }}
+{{ if eq false .type }}
+	{{ $type = "section" }}
+{{ end }}
+{{ if eq true .type }}
+	{{ $type = "" }} 
+{{ end }}
+<section id="{{ $id }}" class="row td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }} align-items-center">
+	<div class="container">
+		<div class="col">
+			{{ with .heading }}
+					<h1 class="text-center mb-4">{{ . }}</h1>
+			{{ end }}
+			<div class="row">
+				<div class="col">
+					{{ if .text }}
+						<div class="row lead mb-5">
+							{{ if eq .Page.File.Ext "md" }}
+							{{ .text | markdownify }}
+							{{ else }}
+							{{ .text | htmlUnescape | safeHTML }}
+							{{ end }}
+						</div>
+					{{ end }}
+					<div class="row {{ $type }} align-items-center justify-content-center">
+						{{/*  needs margin top  */}}
+						{{ range .feature }}
+							{{ partial "bookshop" (slice "simple/feature" . )}}
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

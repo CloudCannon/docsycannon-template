@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "bookshop_bindings" `.Params.content_blocks` }}
+{{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+{{ with .Content }}
+  <div class="container mx-auto mt-5 pt-5">
+    {{ . }}
+  </div>
+  {{ end }}
+{{ end }}

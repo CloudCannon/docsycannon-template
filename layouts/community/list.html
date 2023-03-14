@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<a class="td-offset-anchor"></a>
+{{ partial "bookshop_bindings" `.Params.content_blocks` }}
+{{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+
+<div class="td-content">
+    {{ .Content }}
+</div>
+
+{{ end }}

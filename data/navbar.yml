@@ -1,0 +1,3 @@
+navbar_logo: false
+navbar_logo_path: /icons/logo.svg
+navbar_translucent_over_cover_disable: true

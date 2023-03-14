@@ -1,0 +1,67 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Lead"
+  description: A simple lead/title block with centred text and an arrow pointing to the next section.
+  icon: expand_more
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  color: primary
+  height: auto
+  text: This is a lead section.
+  heading: This can have a heading.
+  id: Lead_ID
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  color: primary
+  height: auto
+  text: This is a lead section.
+  heading: This can have a heading.
+  id: Lead_ID
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  color:
+    label: Color
+    comment: Select a color.
+    type: select
+    options:
+      values:
+        - primary
+        - secondary
+        - success
+        - info
+        - warning
+        - danger
+        - white
+        - light
+        - dark
+        - blue
+        - orange
+        - gray
+        - black
+  height:
+    label: Height
+    comment: Select a height.
+    type: select
+    options:
+      values:
+        - auto
+        - min
+        - med
+        - full
+        - max
+  text:
+    label: Text
+    comment: The text content for the lead section. 
+    type: markdown
+  id:
+    label: ID
+    comment: Used in conjunction with Link Down arrow. Give this lead an ID for the Link Down component to link to.
+    type: text 
+  
+

@@ -1,0 +1,79 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: "Section"
+  description: Meant as a general-purpose content container. It comes in two “flavors”, one for general content and one with styling more suitable for wrapping a horizontal row of feature sections.
+  icon: segment
+  tags: []
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  heading: This is another section
+  text: Inner text
+  color: light
+  height: auto
+  type: true
+  id: Section_ID
+  feature: [bookshop:simple/feature]
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  heading: This is another section
+  text: "Section"
+  color: warning
+  height: auto
+  type: true
+  id: Section_ID
+  feature:
+    - bookshop:simple/feature
+    - bookshop:simple/feature
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  color:
+    label: Color
+    comment: Select a color.
+    type: select
+    options:
+      values:
+        - primary
+        - secondary
+        - success
+        - info
+        - warning
+        - danger
+        - white
+        - light
+        - dark
+        - blue
+        - orange
+        - gray
+        - black
+  height:
+    label: Height
+    comment: Select a height.
+    type: select
+    options:
+      values:
+        - auto
+        - min
+        - med
+        - full
+        - max
+  text:
+    label: Text
+    comment: The text content for the section. 
+    type: markdown
+  type:
+    label: Section Type
+    comment: Horizontal?
+    type: checkbox
+  id:
+    label: ID
+    comment: Used in conjunction with Link Down arrow. Give this section an ID for the Link Down component to link to.
+    type: text 
+
+  
+
+

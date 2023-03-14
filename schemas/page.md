@@ -1,0 +1,9 @@
+---
+title:
+linkTitle:
+description:
+menu:
+  main:
+    weight:
+content_blocks:
+---

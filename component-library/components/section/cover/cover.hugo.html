@@ -1,0 +1,44 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $background_image := .background_image }}
+{{ $logo_image := .logo_image }}
+{{ $col_id := .col_id | default "dark" }}
+{{/* Height can be one of: auto, min, med, max, full. */}}
+{{ $height := .height| default "max" }}
+{{ $byline := .byline| default "" }}
+{{ with $background_image }}
+<style>
+#cover {
+    background-image: url({{ $background_image }});
+}
+</style>
+{{ end }}
+<section id="cover" class="row td-cover-block td-cover-block--height-{{ $height }}{{ if not .Site.Data.navbar.navbar_translucent_over_cover_disable }} js-td-cover{{ end }} td-overlay td-overlay--dark -bg-{{ $col_id }}">
+  <div class="container td-overlay__inner">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          {{ with .title }}<h1 class="display-1 mt-0 mt-md-5 pb-4">{{ $title := . }}{{ with $logo_image }}<img class="td-cover-logo" src="{{ $logo_image }}">{{ end }}{{ $title | html }}</h1>{{ end }}
+          {{ with .subtitle }}<p class="display-2 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
+          {{ range .button }}
+            {{ partial "bookshop" (slice "generic/button" . )}}
+          {{ end }}
+          <div class="my-4 lead">
+            {{ if eq .Page.File.Ext "md" }}
+            {{ .text | markdownify }}
+            {{ else }}
+            {{ .text | htmlUnescape | safeHTML }}
+            {{ end }}
+          </div>
+          {{ with .link_down }}
+            {{ partial "bookshop" (slice "generic/link_down" . )}}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ if $byline }}
+    <div class="byline">
+      <small>{{ $byline }}</small>
+    </div>
+  {{ end }}
+</section>

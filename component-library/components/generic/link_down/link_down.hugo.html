@@ -1,0 +1,3 @@
+{{ $color := .color | default "warning" }}
+{{ $id := .id | default "test" }}
+<a class="btn btn-link text-{{ $color }} mt-4" href="#{{ $id }}"><i class="fa-solid fa-circle-chevron-down" style="font-size: 400%"></i></a>
