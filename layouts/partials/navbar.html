@@ -8,53 +8,55 @@
   {{ end }}
 {{ end }}
 
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark  flex-column flex-md-row td-navbar {{- if $cover }} td-navbar-cover {{- end }}">
-  <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
-    <span class="navbar-brand__logo navbar-logo">
-      {{- if ne .Site.Data.navbar.navbar_logo false -}}
-        <img src="{{ .Site.Data.navbar.navbar_logo_path }}" alt="Could not find file at {{ .Site.Data.navbar.navbar_logo_path }}">
-      {{ end -}}
-    </span>
-    <span class="navbar-brand__name">
-      {{- .Site.Data.site_details.title -}}
-    </span>
-  </a>
-  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
-    <div class="navbar-nav">
-      <ul class="navbar-nav mt-lg-0">
-        {{ $p := . -}}
-        {{ range .Site.Menus.main -}}
-        <li class="nav-item mx-1 mb-2 mb-lg-0">
-          {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
-          {{ with .Page }}{{ $active = or $active ( $.IsDescendant .) }}{{ end -}}
-          {{ $pre := .Pre -}}
-          {{ $post := .Post -}}
-          {{ $url := urls.Parse .URL -}}
-          {{ $baseurl := urls.Parse $.Site.Params.baseURL -}}
-          <a
-            class="nav-link {{- if $active }} active {{- end }}"
-            href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
-            {{- if ne $url.Host $baseurl.Host }} target="_blank" {{- end -}}
-          >
-              {{- with .Pre }}{{ $pre }}{{ end -}}
-              <span {{- if $active }} class="active" {{- end }}>
-                {{- .Name -}}
-              </span>
-              {{- with .Post }}{{ $post }}{{ end -}}
-          </a>
-        </li>
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark w-100 flex-column flex-md-row td-navbar {{- if $cover }} td-navbar-cover {{- end }}">
+  <div class="container-xl">
+    <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
+      <span class="navbar-brand__logo navbar-logo">
+        {{- if ne .Site.Data.navbar.navbar_logo false -}}
+          <img src="{{ .Site.Data.navbar.navbar_logo_path }}" alt="Could not find file at {{ .Site.Data.navbar.navbar_logo_path }}">
         {{ end -}}
-        {{ if (gt (len .Site.Data.versioning.versions) 1) -}}
-          <li class="nav-item dropdown me-4 d-none d-lg-block">
-            {{ partial "navbar-version-selector.html" . -}}
+      </span>
+      <span class="navbar-brand__name">
+        {{- .Site.Data.site_details.title -}}
+      </span>
+    </a>
+    <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+      <div class="navbar-nav">
+        <ul class="navbar-nav mt-lg-0">
+          {{ $p := . -}}
+          {{ range .Site.Menus.main -}}
+          <li class="nav-item mx-1 mb-2 mb-lg-0">
+            {{ $active := or ($p.IsMenuCurrent "main" .) ($p.HasMenuCurrent "main" .) -}}
+            {{ with .Page }}{{ $active = or $active ( $.IsDescendant .) }}{{ end -}}
+            {{ $pre := .Pre -}}
+            {{ $post := .Post -}}
+            {{ $url := urls.Parse .URL -}}
+            {{ $baseurl := urls.Parse $.Site.Params.baseURL -}}
+            <a
+              class="nav-link {{- if $active }} active {{- end }}"
+              href="{{ with .Page }}{{ .RelPermalink }}{{ else }}{{ .URL | relLangURL }}{{ end }}"
+              {{- if ne $url.Host $baseurl.Host }} target="_blank" {{- end -}}
+            >
+                {{- with .Pre }}{{ $pre }}{{ end -}}
+                <span {{- if $active }} class="active" {{- end }}>
+                  {{- .Name -}}
+                </span>
+                {{- with .Post }}{{ $post }}{{ end -}}
+            </a>
           </li>
-        {{ end -}}
-        {{ if (gt (len .Site.Home.Translations) 0) -}}
-          <li class="nav-item dropdown me-4 d-none d-lg-block">
-            {{ partial "navbar-lang-selector.html" . -}}
-          </li>
-        {{ end -}}
-      </ul>
+          {{ end -}}
+          {{ if (gt (len .Site.Data.versioning.versions) 1) -}}
+            <li class="nav-item dropdown me-4 d-none d-lg-block">
+              {{ partial "navbar-version-selector.html" . -}}
+            </li>
+          {{ end -}}
+          {{ if (gt (len .Site.Home.Translations) 0) -}}
+            <li class="nav-item dropdown me-4 d-none d-lg-block">
+              {{ partial "navbar-lang-selector.html" . -}}
+            </li>
+          {{ end -}}
+        </ul>
+      </div> 
     </div> 
-  </div> 
+</div>
 </nav>

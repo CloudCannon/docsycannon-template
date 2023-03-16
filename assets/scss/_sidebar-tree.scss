@@ -104,8 +104,11 @@
 }
 
 .td-sidebar {
+  min-width: calc(250px * var(--pagefind-ui-scale));
+  padding-top: 2rem;
+  
   @include media-breakpoint-up(md) {
-    padding-top: 4rem;
+    padding-top: 5.5rem;
     background-color: $td-sidebar-bg-color;
     padding-right: 1rem;
     border-right: 1px solid $td-sidebar-border-color;

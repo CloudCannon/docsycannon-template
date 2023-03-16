@@ -5,16 +5,6 @@
   <nav 
     class="collapse td-sidebar-nav{{ if .Site.Data.sidebar.sidebar_menu_foldable }} foldable-nav{{ end }}" 
     id="td-section-nav">
-    <button 
-      class="btn btn-link td-sidebar__toggle d-md-none m-0 p-0 ms-3 fas fa-xmark" 
-      style="position: relative; left: calc(100% - 1.5rem);"
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#td-section-nav" 
-      aria-controls="td-section-nav" 
-      aria-expanded="false" 
-      aria-label="Toggle section navigation">
-    </button>
     {{ if  (gt (len .Site.Home.Translations) 0) -}}
       <div class="nav-item dropdown d-block d-lg-none px-4">
         {{ partial "navbar-lang-selector.html" . }}
