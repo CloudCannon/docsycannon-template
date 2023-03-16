@@ -69,8 +69,7 @@
   }
 
   @include media-breakpoint-down(lg) {
-      padding-right: .5rem;
-      padding-left: .75rem;
+      padding-inline: 1.5rem;
 
       .td-navbar-nav-scroll {
           max-width: 100%;

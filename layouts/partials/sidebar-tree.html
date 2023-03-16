@@ -2,55 +2,19 @@
 {{ $sidebarCacheLimit := cond (isset .Site.Data.sidebar "sidebar_cache_limit") .Site.Data.sidebar.sidebar_cache_limit 2000 -}}
 {{ $shouldDelayActive := ge (len .Site.Pages) $sidebarCacheLimit -}}
 <div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }}">
-  {{ if not .Site.Data.sidebar.sidebar_search_disable -}}
-  <form class="td-sidebar__search d-flex align-items-center justify-content
-    {{- if not .Site.Data.search.gcs_engine_id -}}
-      {{- if not .Site.Data.search.algolia_docsearch -}}
-        -end
-      {{- end -}}
-    {{- end -}}
-    {{ if .Site.Data.sidebar.collapsed_sidebar_icon_centered }} justify-content-center {{ end }}">
-    {{ partial "search-input.html" . }}
-    <button 
-      class="btn btn-link td-sidebar__toggle d-md-none m-0 p-0 ms-3 fas fa-bars" 
-      {{- if not .Site.Data.search.gcs_engine_id -}}
-        {{- if not .Site.Data.search.algolia_docsearch -}}
-          style="font-size: 1.5rem;" 
-        {{- end -}}
-      {{- end -}}
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#td-section-nav" 
-      aria-controls="td-section-nav" 
-      aria-expanded="false" 
-      aria-label="Toggle section navigation">
-      {{- if not .Site.Data.search.gcs_engine_id -}}
-        {{- if not .Site.Data.search.algolia_docsearch -}}
-          {{ .Site.Data.sidebar.collapsed_sidebar_title }}
-        {{- end -}}
-      {{- end -}}
-    </button>
-  </form>
-  {{ else -}}
-  <div id="content-mobile">
-  <form class="td-sidebar__search d-flex align-items-right {{ if .Site.Data.sidebar.collapsed_sidebar_icon_centered }} justify-content-center {{ end }}">
-    {{ partial "search-input.html" . }}
-    <button 
-      class="btn btn-link td-sidebar__toggle d-md-none m-0 p-0 ms-3 fas fa-bars"
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#td-section-nav" 
-      aria-controls="td-section-nav" 
-      aria-expanded="false" 
-      aria-label="Toggle section navigation">
-    </button>
-  </form>
-  </div>
-  <div id="content-desktop"></div>
-  {{ end -}}
   <nav 
-    class="collapse {{ if .Site.Data.sidebar.sidebar_search_disable -}} mt-3 {{ end }} td-sidebar-nav{{ if .Site.Data.sidebar.sidebar_menu_foldable }} foldable-nav{{ end }}" 
+    class="collapse td-sidebar-nav{{ if .Site.Data.sidebar.sidebar_menu_foldable }} foldable-nav{{ end }}" 
     id="td-section-nav">
+    <button 
+      class="btn btn-link td-sidebar__toggle d-md-none m-0 p-0 ms-3 fas fa-xmark" 
+      style="position: relative; left: calc(100% - 1.5rem);"
+      type="button" 
+      data-toggle="collapse" 
+      data-target="#td-section-nav" 
+      aria-controls="td-section-nav" 
+      aria-expanded="false" 
+      aria-label="Toggle section navigation">
+    </button>
     {{ if  (gt (len .Site.Home.Translations) 0) -}}
       <div class="nav-item dropdown d-block d-lg-none px-4">
         {{ partial "navbar-lang-selector.html" . }}

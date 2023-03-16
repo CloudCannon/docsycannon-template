@@ -47,6 +47,7 @@ a {
     color: $links;
 }
 
+// Adjusting header stylings
 .display-1 {
     font-size: calc(1.625rem + 4.5vw);
     font-weight: 300;
@@ -57,8 +58,22 @@ a {
     }
 }
 
-// Adjust anchors vs the fixed menu.
+// Pagefind search styling 
+#search {
+    width: 100%;
+}
+
+.pagefind-ui__result-excerpt {
+    min-width: 0 !important;
+    overflow: hidden;
+}
+
 @include media-breakpoint-up(md) {
+    // Padding for sidebars
+    .td-404 main,.td-main main {
+        padding-top: 6.5rem;
+    }
+    // Adjust anchors vs the fixed menu.
     .td-offset-anchor:target {
         display: block;
         position: relative;

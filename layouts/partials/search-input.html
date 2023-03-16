@@ -1,8 +1,21 @@
-{{ if .Site.Data.search.gcs_engine_id -}}
-<div class="td-search mr-2">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="{{ T "ui_search" }}" aria-label="{{ T "ui_search" }}" autocomplete="off">
+<script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+<div class="d-flex mb-5">
+  <div id="search"></div>
+  <button 
+    class="btn btn-link td-sidebar__toggle d-md-none m-0 p-0 ml-3 fas fa-bars" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#td-section-nav" 
+    aria-controls="td-section-nav" 
+    aria-expanded="false" 
+    aria-label="Toggle section navigation">
+  </button>
 </div>
-{{ else if .Site.Data.search.algolia_docsearch -}}
-  <div id="docsearch"></div>
-{{ end -}}
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ 
+          element: "#search", 
+          showImages: false
+        });
+    });
+</script>

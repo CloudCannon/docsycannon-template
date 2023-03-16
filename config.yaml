@@ -45,39 +45,39 @@ params:
       - tags
       - categories
       
-#  KaTeX support   
-  # katex:
-  #   enable: true  # enable/disable KaTeX support
-  #   mhchem:
-  #     enable: true
-  #   html_dom_element: document.body  # Element(s) scanned by auto render extension. Default: document.body
-  #   options:
+# #  KaTeX support   
+#   katex:
+#     enable: true  # enable/disable KaTeX support
+#     mhchem:
+#       enable: true
+#     html_dom_element: document.body  # Element(s) scanned by auto render extension. Default: document.body
+#     options:
 
-  #     # If true (the default), KaTeX will throw a ParseError when it encounters an
-  #     # unsupported command or invalid LaTeX. If false, KaTeX will render unsupported
-  #     # commands as text, and render invalid LaTeX as its source code with hover text
-  #     # giving the error, in the color given by errorColor.
-  #     throwOnError: false
-  #     errorColor: '#CD5C5C'
+#       # If true (the default), KaTeX will throw a ParseError when it encounters an
+#       # unsupported command or invalid LaTeX. If false, KaTeX will render unsupported
+#       # commands as text, and render invalid LaTeX as its source code with hover text
+#       # giving the error, in the color given by errorColor.
+#       throwOnError: false
+#       errorColor: '#CD5C5C'
 
-  #     # This is a list of delimiters to look for math, processed in the same order as
-  #     # the list. Each delimiter has three properties:
-  #     #   left:    A string which starts the math expression (i.e. the left delimiter).
-  #     #   right:   A string which ends the math expression (i.e. the right delimiter).
-  #     #   display: Whether math in the expression should be rendered in display mode.
-  #     delimiters:
-  #       - left: $$
-  #         right: $$
-  #         display: true
-  #       - left: $
-  #         right: $
-  #         display: false
-  #       - left: \(
-  #         right: \)
-  #         display: false
-  #       - left: \[
-  #         right: \]
-  #         display: true
+#       # This is a list of delimiters to look for math, processed in the same order as
+#       # the list. Each delimiter has three properties:
+#       #   left:    A string which starts the math expression (i.e. the left delimiter).
+#       #   right:   A string which ends the math expression (i.e. the right delimiter).
+#       #   display: Whether math in the expression should be rendered in display mode.
+#       delimiters:
+#         - left: $$
+#           right: $$
+#           display: true
+#         - left: $
+#           right: $
+#           display: false
+#         - left: \(
+#           right: \)
+#           display: false
+#         - left: \[
+#           right: \]
+#           display: true
 
 # Highlighting config
 pygmentsCodeFences: true
