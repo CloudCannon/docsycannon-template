@@ -2,12 +2,50 @@
 _schema: default
 title: About
 linkTitle: About
+description: About DocsyCannon docs
 menu:
   main:
     weight: 1
 content_blocks:
   - _bookshop_name: section/lead
     color: primary
+    height: auto
+    text: >-
+      This is the technical documentation for DocsyCannon. DocsyCannon is the
+      Hugo theme Docsy, configured to be live editable in CloudCannon's
+      **Content Management System**.
+
+
+      DocsyCannon allows you to create technical documentation sites without
+      having any developer experience. It also serves as a good starting point
+      for developers who want to build their own customised documentation
+      workflow for content editing in a CMS.
+    heading: What is DocsyCannon?
+    id:
+  - _bookshop_name: section/lead
+    color: dark
+    height: auto
+    text: >-
+      This template allows you to start writing documentation 'out of the box'.
+      Write docs and blog posts in a text editor, with the ability to insert
+      code snippets, images, videos, links, formulae and more.
+
+
+      Build out other pages such as your home page or an 'about' page with
+      Bookshop. Bookshop defines conventions for writing components for Hugo and
+      allows you to build pages out of these components. Use the ones provided,
+      or use this template as a a starting point for building your own.
+
+
+      DocsyCannon uses&nbsp;[Pagefind](https://pagefind.app/), so that your site
+      comes with search ready to go as soon as you finish your build on
+      CloudCannon. Pagefind is a fully static search library that aims to
+      perform well on large sites, while using as little of your users’
+      bandwidth as possible, and without hosting any infrastructure.
+    heading: Why use this template?
+    id:
+  - _bookshop_name: section/lead
+    color: dark
     height: auto
     text: >-
       A technical documentation site is a website that your users can visit to
@@ -46,25 +84,27 @@ content_blocks:
       addition to your documentation, your site might also contain material like
       contact information, a blog, or information about how to contribute to the
       project.
-    heading: So what’s a technical documentation site?
+    heading: So what is a technical documentation site?
     id:
   - _bookshop_name: section/community_links
     left:
       left_heading: Learn and Connect
-      left_sub_heading: 'Using or want to use Docsy? Find out more here:'
+      left_sub_heading: 'Using or want to use DocsyCannon? Find out more here:'
       links:
-        - name: Documentation
-          url: https://example.org/mail
-          icon: fa fa-envelope
-          desc: Documentation for DocsyCannon made using DocsyCannon
         - name: GitHub
-          url: /
+          url: https://github.com/CloudCannon/docsycannon-template
           icon: fab fa-github
-          desc: The repository containing the DocsyCannon template
+          desc: The repository containing a template for you to get started.
         - name: CloudCannon
           url: https://cloudcannon.com/
           icon: fa fa-cloud
-          desc: Host and edit your site on CloudCannon for full editing experience
+          desc: >-
+            Host and edit your site on CloudCannon with their Content Management
+            System.
+        - name: Bookshop
+          url: https://github.com/CloudCannon/bookshop/blob/main/guides/hugo.adoc
+          icon: fa fa-cloud
+          desc: Discussion and help from your fellow users
       conclusion:
         conclusion_text:
         conclusion_link:
@@ -77,8 +117,22 @@ content_blocks:
         conclusion_link:
         conclusion_link_text:
       links:
-        - name: GitHub
+        - name: Docs Feedback
+          url: https://github.com/CloudCannon/docsycannon-docs/issues
+          icon: fab fa-github
+          desc: 'Let us know of any issues or improvements to these docs. '
+        - name: Template Feedback
+          url: https://github.com/CloudCannon/docsycannon-template/issues
+          icon: fab fa-github
+          desc: >-
+            Let us know of any issues or improvements to the DocsyCannon
+            template. 
+        - name: Docsy
           url: https://github.com/google/docsy
           icon: fab fa-github
-          desc: Development takes place here!
+          desc: Contribute to the original project.
+        - name: DocsyCannon
+          url: https://github.com/CloudCannon/docsycannon-template/pulls
+          icon: fab fa-github
+          desc: Contribute to DocsyCannon.
 ---
