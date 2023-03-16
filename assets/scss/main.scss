@@ -69,9 +69,9 @@ a {
 }
 
 @include media-breakpoint-up(md) {
-    // Padding for sidebars
+    // Padding for main content
     .td-404 main,.td-main main {
-        padding-top: 6.5rem;
+        padding-top: 5rem;
     }
     // Adjust anchors vs the fixed menu.
     .td-offset-anchor:target {
