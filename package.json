@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild:fetch-color": "node assets/js/fetch-color.js",
     "dev": "node assets/js/fetch-color.js && hugo serve",
-    "start": "hugo && node assets/js/fetch-color.js && npx -y pagefind --source public --serve"
+    "start": "node assets/js/fetch-color.js && hugo && npx -y pagefind --source public --serve"
   },
   "repository": {
     "type": "git",

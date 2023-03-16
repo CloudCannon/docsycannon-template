@@ -62,12 +62,6 @@
       white-space: nowrap;
   }
 
-  // For .td-search__input styling, see _search.scss
-
-  .dropdown {
-      min-width: 100px;
-  }
-
   @include media-breakpoint-down(lg) {
       padding-inline: 1.5rem;
 

@@ -710,19 +710,6 @@ collections_config:
         type: text
         options:
           empty_type: string
-      search:
-        label: Search
-        comment: Configure search options for your site. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#site-search-options).
-      gcs_engine_id:
-        label: Google Custom Search Engine ID
-        comment: "The default search option, which uses Google’s index of your public site to generate a search results page. If you don’t specify a Google Custom Search Engine ID for your project and haven’t enabled any other search options, the search box won’t appear in your site. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#configure-search-with-a-google-custom-search-engine)."
-        type: text
-        options:
-          empty_type: string
-      algolia_docsearch:
-        label: Algolia DocSearch
-        comment: As an alternative to GCSE, you can use [Algolia DocSearch](https://docsearch.algolia.com/) with this theme. Algolia DocSearch is free for public documentation sites. Docsy supports Algolia DocSearch v3. Remove GCSE ID, Local Search set to false, and disable the sidebar search. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#configure-algolia-docsearch).
-        type: switch
       user_interface:
         label: User Interface
         comment: Configure the UI on content pages.
@@ -768,10 +755,6 @@ collections_config:
         label: Sidebar Cache Limit
         comment: On large sites (default is 2000 pages) the section menu is not generated for each page, but cached for the whole section. The HTML classes for marking the active menu item (and menu path) are then set using JS. You can adjust the limit for activating the cached section here.
         type: number
-      sidebar_search_disable:
-        label: Sidebar Search Disabled
-        comment: Turn on to disable sidebar search input. This must be turned on if using Algolia DocSearch.
-        type: switch
       sidebar_menu_truncate:
         label: Sidebar Menu Truncate
         comment: The upper limit for how many pages are displayed in the sidebar menu.

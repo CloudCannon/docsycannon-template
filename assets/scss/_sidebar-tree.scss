@@ -119,12 +119,6 @@
     margin: 1rem;
   }
 
-  &__search {
-    padding: 1rem 15px;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
   &__inner {
     order: 0;
 
@@ -139,10 +133,6 @@
 
     @include media-breakpoint-up(xl) {
       flex: 0 1 320px;
-    }
-
-    .td-search-box {
-      width: 100%;
     }
   }
 
