@@ -2,7 +2,7 @@ title: DocsyCannon template
 description: A technical documentation site template
 
 # So that 'hugo serve' has the correct prefix
-baseURL: 'https://localhost'
+baseURL: '/'
 
 # Will give values to .Lastmod etc.
 enableGitInfo: true
