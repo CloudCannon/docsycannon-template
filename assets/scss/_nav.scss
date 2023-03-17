@@ -201,3 +201,15 @@ nav.foldable-nav {
       }
   }
 }
+
+// Prevent navbar max-width applying until larger screens than container-xl
+@media (min-width: 1140px) {
+    .td-navbar-container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 1750px) {
+    .td-navbar-container {
+        max-width: 1140px;
+    }
+}

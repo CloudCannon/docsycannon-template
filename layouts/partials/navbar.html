@@ -9,7 +9,7 @@
 {{ end }}
 
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark w-100 td-navbar {{- if $cover }} td-navbar-cover {{- end }}">
-  <div class="container-xl flex-column flex-md-row">
+  <div class="container-xl td-navbar-container flex-column flex-md-row">
     <a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
       <span class="navbar-brand__logo navbar-logo">
         {{- if ne .Site.Data.navbar.navbar_logo false -}}
