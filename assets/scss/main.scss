@@ -92,21 +92,19 @@ a {
         visibility: hidden;
     }
 }
+
+// Remove extra padding on different screen sizes
+.td-breadcrumbs,
 .td-content {
     padding-inline: 0;
 }
 
-
 @include media-breakpoint-up(xl) {
-    // Remove extra padding on larger screen sizes
     .td-arrow-down,
-    .td-breadcrumbs,
     .td-overlay__inner {
         padding-inline: 0;
     }
 }
-
-
 
 @import "rtl/main";
 @import "styles_project";
