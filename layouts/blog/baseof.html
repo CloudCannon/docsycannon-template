@@ -10,7 +10,7 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
-          <aside class="col-12 col-md-3 col-l-2 col-xl-2 td-sidebar d-print-none">
+          <aside class="col-12 col-md-4 col-lg-3 col-xl-2 td-sidebar d-print-none">
             {{ partial "search-input.html" . }}
             {{ partial "sidebar.html" . }}
           </aside>
@@ -21,7 +21,7 @@
             {{ partial "toc.html" . }}
             {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
-          <main data-pagefind-body class="col-12 col-md-9 col-xl-8 px-md-4" role="main">
+          <main data-pagefind-body class="col-12 col-md-8 col-lg-9 col-xl-8 px-md-4" role="main">
             {{ with .CurrentSection.OutputFormats.Get "rss" -}}
             <a class="td-rss-button" title="RSS" href="{{ .Permalink | safeURL }}" target="_blank" rel="noopener">
               <i class="fa-solid fa-rss" aria-hidden="true"></i>
