@@ -2,6 +2,16 @@
 
 [DocsyCannon][] is a [Hugo theme module][] for technical documentation sites, providing easysite navigation, structure, and more. This template's aim is to get you started writing documentation using the [Docsy][] theme hugo module with [CloudCannon's CMS][]. Use this project as a template and edit it with your own content.
 
+## Features
+
+- Pre-built pages
+- Pre-styled components
+- Pre-built [search](www.pagefind.app)
+- Docs with sidebar navigation menu and taxonomy features
+- Blog with pagination and category pages
+- Optimised for editing in [CloudCannon](www.cloudcannon.com)
+
+
 ## Using DocsyCannon as a template
 
 A simple way to get started is to use this project as a template, which gives you a site project that is set up and ready to use. To do this:
@@ -51,10 +61,6 @@ github.com/google/docsy-example github.com/google/docsy/dependencies@v0.5.1-0.20
 github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1 github.com/twbs/bootstrap@v4.6.2+incompatible
 github.com/google/docsy/dependencies@v0.5.1-0.20221014161617-be5da07ecff1 github.com/FortAwesome/Font-Awesome@v0.0.0-20220831210243-d3a7818c253f
 ```
-
-You can find detailed theme instructions in the [Docsy user guide][].
-
-This is not an officially supported Google product. This project is currently maintained.
 
 ## Running a container locally
 
