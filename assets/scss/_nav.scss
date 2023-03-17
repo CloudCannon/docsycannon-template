@@ -41,6 +41,7 @@
   .navbar-brand {
       text-transform: none;
       text-align: middle;
+      margin-right: 0;
 
       &__name {
         font-weight: $font-weight-bold;
