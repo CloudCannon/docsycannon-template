@@ -11,7 +11,7 @@
 			{{- if .Pages -}}
 			{{ $pag := .Paginate (( $.Scratch.Get "blog-pages").GroupByDate "2006" )}}
 				{{ range $pag.PageGroups }}
-				<h2>{{ T "post_posts_in" }} {{ .Key }}</h2>
+				<h1>{{ T "post_posts_in" }} {{ .Key }}</h1>
 				<ul class="list-unstyled mt-4">
 					{{ range .Pages }}
 					<li class="media mb-4">
