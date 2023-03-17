@@ -72,6 +72,7 @@ a {
     .td-404 main,.td-main main {
         padding-top: 5rem;
     }
+
     // Adjust anchors vs the fixed menu.
     .td-offset-anchor:target {
         display: block;
@@ -89,6 +90,19 @@ a {
         margin-top: -5rem;
         height: 5rem;
         visibility: hidden;
+    }
+}
+.td-content {
+    padding-inline: 0;
+}
+
+
+@include media-breakpoint-up(xl) {
+    // Remove extra padding on larger screen sizes
+    .td-arrow-down,
+    .td-breadcrumbs,
+    .td-overlay__inner {
+        padding-inline: 0;
     }
 }
 
