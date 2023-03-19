@@ -7,8 +7,8 @@
     <header class="d-flex justify-content-center">
       {{ partial "navbar.html" . }}
     </header>
-    <div class="td-default td-outer">
-      <main role="main" class="td-main container-fluid ">
+    <div class="container-fluid td-default td-outer">
+      <main role="main" class="td-main">
         {{ block "main" . }}{{ end }}
       </main>
       {{ partial "footer.html" . }}
