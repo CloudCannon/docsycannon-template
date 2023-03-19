@@ -608,47 +608,36 @@ collections_config:
     _enabled_editors:
       - data
     _inputs:
-      title:
-        label: Title
-        comment: The title to use for the navbar and site head.
-        type: text
-        options:
-          empty_type: string
       navbar:
-        label: Navbar
         comment: Configure site navbar settings.
+      logo_text:
+        comment: The text displayed in the top left corner of the nav.
       navbar_logo:
-        label: Navbar Logo
         comment: Turn on to enable logo in the top left of the navbar.
         type: switch
       navbar_logo_path:
-        label: Navbar Logo Path
         comment: Link to your logo, anywhere in the sites static folder.
         type: image
       navbar_translucent_over_cover_disable:
-        label: Translucent Nav
-        comment: Turn on to make navbar translucent when the first item on the page is a "Cover" Bookshop component.
+        label: Transparent Nav
+        comment: Turn on to make navbar transparent when the first item on the page is a "Cover" Bookshop component.
         type: switch
       footer:
-        label: Footer
-        comment: Configure site footer settings.
+        comment: Configure your sites footer settings.
       copyright:
-        label: Copyright
-        comment: The name to be included in the copyright statement in the footer 
+        comment: The name to be included in the copyright statement in the footer.
         type: text
         options:
           empty_type: string
       privacy_policy:
-        label: Privacy Policy
         comment: The page to be linked to containing your privacy policy. 
         type: url
       footer_about_disable:
-        label: Footer "About" Link
+        label: Disable Footer "About" Link
         comment: Turn on to disable the link to the "About" page in the footer.
         type: switch
       versioning:
-        label: Versioning
-        comment: Set up a versioning system for your documentation. More info [here](https://www.docsy.dev/docs/adding-content/versioning/).
+        comment: Set up a versioning system for your documentation. More info [here](https://www.sassy-lace.cloudvent.net/docs/versioning).
       version_menu:
         label: Version Menu Name
         comment: If versions are enabled, this is the name of the version drop-down menu.
@@ -656,12 +645,10 @@ collections_config:
         options:
           empty_type: string
       versions:
-        label: Versions
-        comment: An array of all versions of the site. When versions are added here, a dropdown will appear in the navbar.
+        comment: An array of all versions of the site. When more than one version is added here, a dropdown will appear in the navbar.
         type: array
       version:
-        label: Version
-        comment: The version name.
+        comment: The version name in the version selector dropdown.
         type: text
         options:
           empty_type: string
@@ -670,7 +657,6 @@ collections_config:
         comment: The link to the version.
         type: url
       current_version:
-        label: Current Version
         comment: Sets the version, contained in your versions list that will be the default version when users navigate to your site.
         type: text
         options:
@@ -685,11 +671,11 @@ collections_config:
         type: switch
       url_latest_version:
         label: Latest Version Link
-        comment: A link to the latest version inside Archived Version Banner when on.
+        comment: Provide a link to the latest version inside Archived Version Banners when on.
         type: url
       github:
         label: GitHub
-        comment: For more information, read [here](https://www.docsy.dev/docs/adding-content/repository-links/).
+        comment: For more information, read [here](https://www.sassy-lace.cloudvent.net/docs/repository-links/).
       github_repo:
         label: Github Repository
         comment: "The URL for your site’s source repository. This is used to generate the Edit this page, Create child page, and Create documentation issue links."
@@ -711,18 +697,17 @@ collections_config:
         options:
           empty_type: string
       user_interface:
-        label: User Interface
-        comment: Configure the UI on content pages.
+        comment: Configure the User Interface on content pages.
       breadcrumb_disable:
-        label: Breadcrumbs
+        label: Breadcrumbs Disabled
         comment: Turn on to disable breadcrumbs in documentation section.
         type: switch
       taxonomy_breadcrumb_disable:
-        label: Taxonomy Breadcrumbs
+        label: Taxonomy Breadcrumbs Disabled
         comment: Turn on to disable breadcrumbs on the Taxonomy page.
         type: switch
       page_meta_links_disabled:
-        label: Page Meta Links
+        label: Page Meta Links Disabled
         comment: Turn on to disable page meta links in the sidebar of docs and blog sections.
         type: switch
       readingtime:
@@ -731,7 +716,7 @@ collections_config:
         type: switch
       feedback:
         label: Feedback
-        comment: Enable feedback for your content pages.
+        comment: Configure feedback support for your content pages.
       enable:
         label: Enable Feedback
         comment: Turn on to enable feedback buttons at the bottom of content pages. Used in conjunction with Google Analytics.
@@ -746,7 +731,7 @@ collections_config:
         type: markdown
       sidebar:
         label: Sidebar Settings
-        comment: Configure the sidebar in docs and blog pages. Read more [here](https://www.docsy.dev/docs/adding-content/navigation/#section-menu)
+        comment: Configure the sidebar in docs and blog pages. Read more [here](https://www.sassy-lace.cloudvent.net/docs/adding-content/navigation/#section-menu)
       sidebar_menu_foldable:
         label: Foldable Sidebar Menu
         comment: Make the sidebar menu foldable by turning this on.
