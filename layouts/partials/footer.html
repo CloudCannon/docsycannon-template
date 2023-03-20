@@ -1,15 +1,15 @@
 {{ $links := .Site.Data.footer.footer_links -}}
-<footer class="bg-dark align-items-center row d-print-none">
+<footer class="bg-dark align-items-center row d-print-none pt-3">
   <div class="container-fluid flex-shrink-1 mx-sm-5">
     <div class="row">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2 mt-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
         {{ with $links }}
         {{ with index . "user" }}
         {{ template "footer-links-block"  . }}
         {{ end }}
         {{ end }}
       </div>
-      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3 mt-2">
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
         {{ with $links }}
         {{ with index . "developer" }}
         {{ template "footer-links-block"  . }}
@@ -17,8 +17,8 @@
         {{ end }}
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2 text-white">
-        {{ with .Site.Data.footer.copyright }}<small>&copy; {{ now.Year}} {{ . }} {{ T "footer_all_rights_reserved" }}</small>{{ end }}
-        {{ with .Site.Data.footer.privacy_policy }}<p class=" my-2"><a class="text-white" href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a></p>{{ end }}
+        {{ with .Site.Data.footer.copyright }}<p>&copy; {{ now.Year}} {{ . }} {{ T "footer_all_rights_reserved" }}</p>{{ end }}
+        {{ with .Site.Data.footer.privacy_policy }}<p><a class="text-white" href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a></p>{{ end }}
         {{ if not .Site.Data.footer.footer_about_disable -}}
           {{ with .Site.GetPage "about" }}<p><a class="text-white" href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
         {{ end }}
