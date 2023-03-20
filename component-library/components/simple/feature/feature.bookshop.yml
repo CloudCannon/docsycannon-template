@@ -8,28 +8,26 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  icon: fas fa-cubes
-  title: A title
-  text: Some text
-  link: 
-    url: https://github.com/gohugoio/hugo
-    url_text: Read More
+  url:
+  title:
+  text:
+  feature_color:
+  image:
+    path:
+    feature_image_width:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  icon: fas fa-cubes
+  url: /
   title: A title
   text: Some text
-  link: 
-    url: https://github.com/gohugoio/hugo
-    url_text: Read More
+  feature_color: "#FFF"
+  image: 
+    path: https://placekitten.com/50/50
+    feature_image_width:
   
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  icon:
-    label: Icon
-    comment: Set an icon using Font Awesome Icons. Include the prefix, 'fas' or 'fab' followed by your icon.
-    type: text
   title:
     label: Title
     comment: The title for the feature.
@@ -42,8 +40,16 @@ _inputs:
     label: Url
     comment: The url of the page to link to.
     type: url
-  url_text:
-    label: Link Text
-    comment: The text to be displayed for the clickable link.
-    type: text
+  path:
+    label: Image Path
+    comment: Link the path to your image.
+    type: image
+  feature_color:
+    label: Link Color
+    comment: Specify a color here for the feature text fields. Will default to global link color otherwise.
+    type: color
+  feature_image_width:
+    label: Image Width
+    comment: Specify a max-width for your image.
+    type: number
 
