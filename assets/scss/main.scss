@@ -100,6 +100,31 @@ a {
     padding-inline: 0;
 }
 
+// Prevent navbar max-width applying until larger screens than container-xl
+@media (min-width: 1140px) {
+    .td-footer-container {
+        max-width: 100%;
+    }
+    .td-footer-links-left {
+        padding-left: 1rem;
+    }
+    .td-footer-links-right {
+        padding-right: 1rem;
+
+    }
+}
+@media (min-width: 1750px) {
+    .td-footer-container {
+        max-width: 1140px;
+    }
+    .td-footer-links-left {
+        padding-left: 0;
+    }
+    .td-footer-links-right {
+        padding-right: 0;
+    }
+}
+
 @include media-breakpoint-up(xl) {
     .td-arrow-down,
     .td-overlay__inner {

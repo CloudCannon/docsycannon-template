@@ -1,15 +1,15 @@
 {{ $links := .Site.Data.footer.footer_links -}}
 <footer class="bg-dark align-items-center row d-print-none pt-3">
-  <div class="container-fluid flex-shrink-1 mx-sm-5">
+  <div class="container-xl td-footer-container flex-shrink-1 mx-auto">
     <div class="row">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2 td-footer-links-left">
         {{ with $links }}
         {{ with index . "user" }}
         {{ template "footer-links-block"  . }}
         {{ end }}
         {{ end }}
       </div>
-      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3 td-footer-links-right">
         {{ with $links }}
         {{ with index . "developer" }}
         {{ template "footer-links-block"  . }}
