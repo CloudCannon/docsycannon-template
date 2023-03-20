@@ -15,10 +15,10 @@
             {{ partial "sidebar.html" . }}
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            {{ partial "toc.html" . }}
             {{ if not .Site.Data.user_interface.page_meta_links_disabled }}
               {{ partial "page-meta-links.html" . }}
             {{ end }}
-            {{ partial "toc.html" . }}
             {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
           <main data-pagefind-body class="col-12 col-md-8 col-lg-9 col-xl-8 px-med-4 container-xl" role="main">
