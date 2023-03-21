@@ -8,10 +8,8 @@
   margin-left: -15px;
 
   @include media-breakpoint-up(md) {
-    @supports (position: sticky) {
-      max-height: calc(100vh - 10rem);
-      overflow-y: auto;
-    }
+    max-height: calc(100vh - 10rem);
+    overflow-y: auto;
   }
 
   @include media-breakpoint-up(md) {
@@ -128,12 +126,8 @@
     order: 0;
 
     @include media-breakpoint-up(md) {
-      @supports (position: sticky) {
-        position: sticky;
-        top: 4rem;
-        z-index: 10;
-        height: auto;
-      }
+      z-index: 10;
+      height: auto;
     }
 
     @include media-breakpoint-up(xl) {
@@ -159,7 +153,7 @@
 }
 
 .td-sidebar-toc {
-  position: relative !important;
-  padding-top: 2rem !important; 
+  position: static !important;
+  padding-top: 5.5rem !important; 
   height: auto !important;
 }
