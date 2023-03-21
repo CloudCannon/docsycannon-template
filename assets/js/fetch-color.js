@@ -1,6 +1,7 @@
 const fs = require('fs');
 // read theme color from _data/site.json
 fs.readFile('./data/colors.json', 'utf8', function(err, dataFile){
+    console.log(`Reading /data/colors.json...`)
     
     if(err){
         console.log(err);
@@ -72,13 +73,11 @@ fs.readFile('./data/colors.json', 'utf8', function(err, dataFile){
         if (dataFile.black) {
             const replacementString = dataFile.black;
             replaced = replaced.replace(/\$black: .*/g, ('$black: ' + replacementString + ' !default' + ';'));
-        } 
-        if (dataFile.links) {
-            const replacementString = dataFile.links;
-            replaced = replaced.replace(/\$links: .*/g, ('$links: ' + replacementString + ' !default' + ';'));
         }
         // Write result back to variables.scss
         fs.writeFile('./assets/scss/_variables.scss', replaced, 'utf-8', function (err) {
+            console.log(`Replacing /assets/scss/_variables.scss...`);
+
             if(err){
                 console.log(err);
             }

@@ -5,8 +5,9 @@
   "main": "none.js",
   "scripts": {
     "prebuild:fetch-color": "node assets/js/fetch-color.js",
-    "dev": "node assets/js/fetch-color.js && hugo serve",
-    "start": "node assets/js/fetch-color.js && hugo && npx -y pagefind --source public --serve"
+    "prebuild:fetch-font": "node assets/js/fetch-font.js",
+    "dev": "npm run prebuild:fetch-color && npm run prebuild:fetch-font && hugo serve",
+    "start": "npm run prebuild:fetch-color && npm run prebuild:fetch-font && hugo && npx -y pagefind --source public --serve"
   },
   "repository": {
     "type": "git",

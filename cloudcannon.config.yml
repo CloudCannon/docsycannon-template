@@ -778,6 +778,16 @@ collections_config:
         type: color
       links:
         type: color
+      content_link_underline:
+        label: Underline Links
+        comment: Underline any links on your content pages.
+        type: switch
+      link_color:
+        comment: The default color for links on your site.
+        type: color
+      content_link_color:
+        comment: The color for the links on your content pages.
+        type: color
 
 # Control which collections are displayed in the CloudCannon site navigation,
 # and how those collections are grouped.

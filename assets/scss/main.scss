@@ -67,8 +67,9 @@ footer {
     }
 }
 
-a {
-    color: $links;
+p > a {
+    color: $content-link-color;
+    text-decoration: $content-link-decoration;
 }
 
 // Adjusting header stylings

@@ -18,9 +18,9 @@
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2 text-white">
         {{ with .Site.Data.footer.copyright }}<p>&copy; {{ now.Year}} {{ . }} {{ T "footer_all_rights_reserved" }}</p>{{ end }}
-        {{ with .Site.Data.footer.privacy_policy }}<p><a class="text-white" href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a></p>{{ end }}
+        {{ with .Site.Data.footer.privacy_policy }}<p><a class="text-white text-decoration-none" href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a></p>{{ end }}
         {{ if not .Site.Data.footer.footer_about_disable -}}
-          {{ with .Site.GetPage "about" }}<p><a class="text-white" href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
+          {{ with .Site.GetPage "about" }}<p><a class="text-white text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
         {{ end }}
       </div>
     </div>

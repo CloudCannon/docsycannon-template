@@ -14,6 +14,7 @@ blueprint:
   feature_color:
   image:
     path:
+    alt:
     feature_image_width:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -24,7 +25,8 @@ preview:
   feature_color: "#FFF"
   image: 
     path: https://placekitten.com/50/50
-    feature_image_width:
+    alt: A kitten
+    feature_image_width: 64
   
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
@@ -44,6 +46,10 @@ _inputs:
     label: Image Path
     comment: Link the path to your image.
     type: image
+  alt:
+    label: Image Alt
+    comment: Text to display if image cannot load or user is using a screen reader.
+    type: textarea
   feature_color:
     label: Link Color
     comment: Specify a color here for the feature text fields. Will default to global link color otherwise.
