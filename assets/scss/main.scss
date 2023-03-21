@@ -126,6 +126,10 @@ p > a {
     padding-inline: 0;
 }
 
+.tab-content .tab-pane {
+    max-width: 100%;
+}
+
 @include media-breakpoint-up(xl) {
     .td-arrow-down,
     .td-overlay__inner {
