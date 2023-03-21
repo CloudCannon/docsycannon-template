@@ -5,11 +5,18 @@
   <nav 
     class="collapse td-sidebar-nav{{ if .Site.Data.sidebar.sidebar_menu_foldable }} foldable-nav{{ end }}" 
     id="td-section-nav">
-    {{ if  (gt (len .Site.Home.Translations) 0) -}}
-      <div class="nav-item dropdown d-block d-lg-none px-3">
-        {{ partial "navbar-lang-selector.html" . }}
-      </div>
-    {{ end -}}
+    <div class="d-flex justify-content-between">
+      {{ if  (gt (len .Site.Home.Translations) 0) -}}
+        <div class="nav-item dropdown d-block d-lg-none px-3">
+          {{ partial "navbar-lang-selector.html" . }}
+        </div>
+      {{ end -}}
+      {{ if (gt (len .Site.Data.versioning.versions) 1) -}}
+        <div class="nav-item dropdown d-block d-lg-none px-3">
+          {{ partial "navbar-version-selector.html" . -}}
+        </div>
+      {{ end }}
+    </div>
     {{ $navRoot := cond (and (ne .Params.toc_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection -}}
     {{ $ulNr := 0 -}}
     {{ $ulShow := cond (isset .Site.Data.sidebar "ul_show") .Site.Data.sidebar.ul_show 1 -}}
