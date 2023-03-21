@@ -6,7 +6,7 @@
     class="collapse td-sidebar-nav{{ if .Site.Data.sidebar.sidebar_menu_foldable }} foldable-nav{{ end }}" 
     id="td-section-nav">
     {{ if  (gt (len .Site.Home.Translations) 0) -}}
-      <div class="nav-item dropdown d-block d-lg-none px-4">
+      <div class="nav-item dropdown d-block d-lg-none px-3">
         {{ partial "navbar-lang-selector.html" . }}
       </div>
     {{ end -}}

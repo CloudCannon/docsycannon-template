@@ -213,3 +213,17 @@ nav.foldable-nav {
         max-width: 1140px;
     }
 }
+
+// Positioning dropdown at large screen sizes
+@include media-breakpoint-up(lg) {
+    .td-navbar-nav-scroll,
+    .navbar-nav {
+        overflow: visible !important;
+    }
+    
+    .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+    }
+}
+
