@@ -12,9 +12,13 @@
       </h4>
     {{ end }}
   </a>
-  {{ with .text }}
-    <div style="color: {{ $.feature_color }};" class="mb-0">
-      {{ . | markdownify }}
+  {{ if .text }}
+    <div style="color: {{ $.feature_color }};" class="lead mb-0">
+      {{ if eq .Page.File.Ext "md" }}
+        {{ .text | markdownify }}
+      {{ else }}
+        {{ .text | htmlUnescape | safeHTML }}
+      {{ end }}
     </div>
   {{ end }}
 </div>  
