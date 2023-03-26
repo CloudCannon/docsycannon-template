@@ -14,10 +14,10 @@
   }
 </style>
 <div class="d-print-none">
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<h2 class="feedback--title">{{ .Site.Data.user_interface.feedback.feedback_title }}</h2>
+<p class="feedback--question">{{ .Site.Data.user_interface.feedback.feedback_question }}</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">{{ .Site.Data.user_interface.feedback.yes_button }}</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">{{ .Site.Data.user_interface.feedback.no_button }}</button>
 <p class="feedback--response feedback--response-yes">
   {{ .Site.Data.user_interface.feedback.yes_message | markdownify }}
 </p>
