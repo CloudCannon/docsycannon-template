@@ -6,11 +6,11 @@
 {{ $height := .height| default "max" }}
 {{ $byline := .byline| default "" }}
 {{ with $background_image }}
-<style>
-#cover {
-    background-image: url({{ $background_image }});
-}
-</style>
+  <style>
+    #cover {
+        background-image: url({{ $background_image }});
+    }
+  </style>
 {{ end }}
 <section id="cover" class="row td-cover-block td-cover-block--height-{{ $height }}{{ if not .Site.Data.navbar.navbar_translucent_over_cover_disable }} js-td-cover{{ end }} td-overlay td-overlay--dark -bg-{{ $col_id }}">
   <div class="container-xl td-overlay__inner">
@@ -24,14 +24,14 @@
           {{ end }}
           <div class="my-4 lead">
             {{ if eq .Page.File.Ext "md" }}
-            {{ .text | markdownify }}
+              {{ .text | markdownify }}
             {{ else }}
-            {{ .text | htmlUnescape | safeHTML }}
+              {{ .text | htmlUnescape | safeHTML }}
             {{ end }}
           </div>
-          {{ with .link_down }}
-            {{ partial "bookshop" (slice "generic/link_down" . )}}
-          {{ end }}
+            {{ with .link_down }}
+              {{ partial "bookshop" (slice "generic/link_down" . )}}
+            {{ end }}
         </div>
       </div>
     </div>

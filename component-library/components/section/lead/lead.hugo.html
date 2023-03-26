@@ -9,7 +9,13 @@
 			{{ with .heading }}
 				<h1>{{ . }}</h1>
 			{{ end }}
-			{{ .text | markdownify }}
+			{{ if .text }}
+				{{ if eq .Page.File.Ext "md" }}
+					{{ .text | markdownify }}
+				{{ else }}
+					{{ .text | htmlUnescape | safeHTML }}
+				{{ end }}
+			{{ end }}
 		</div>
 	</div>
 </section>

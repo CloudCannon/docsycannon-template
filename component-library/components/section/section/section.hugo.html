@@ -20,9 +20,9 @@
 					{{ if .text }}
 						<div class="row lead mb-5">
 							{{ if eq .Page.File.Ext "md" }}
-							{{ .text | markdownify }}
+								{{ .text | markdownify }}
 							{{ else }}
-							{{ .text | htmlUnescape | safeHTML }}
+								{{ .text | htmlUnescape | safeHTML }}
 							{{ end }}
 						</div>
 					{{ end }}
