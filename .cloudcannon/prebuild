@@ -1,2 +1,3 @@
 npm i
 npm run prebuild:fetch-color
+npm run prebuild:fetch-font
