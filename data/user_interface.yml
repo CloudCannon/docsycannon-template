@@ -6,11 +6,11 @@ feedback:
   enable: true
   feedback_title: Feedback
   feedback_question: Was this page helpful?
-  yes_button: Yes
+  yes_button: "Yes"
   yes_message: >-
     Glad to hear it! Please tell us [how we can
     improve](https://github.com/USERNAME/REPOSITORY/issues/new).
-  no_button: No
+  no_button: "No"
   no_message: >-
     Sorry to hear that. Please tell us [how we can
     improve](https://github.com/USERNAME/REPOSITORY/issues/new).
