@@ -2,7 +2,7 @@
 // Left side navigation
 //
 .td-sidebar-nav {
-  padding-right: 0.5rem;
+  padding-inline: 1rem;
   padding-top: 2rem;
   margin-right: -15px;
   margin-left: -15px;
@@ -79,10 +79,6 @@
     }
   }
 
-  & > .td-sidebar-nav__section {
-    padding-left: 1rem;
-  }
-
   li i {
     // Layout of icons
     padding-right: 0.5em;
@@ -116,7 +112,6 @@
 
   &__toggle {
     margin: 0;
-    margin-left: 1rem;
     padding: 1rem 0rem;
     line-height: 1;
     color: $gray-900;

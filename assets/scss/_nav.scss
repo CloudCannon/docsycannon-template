@@ -120,6 +120,10 @@
   }
 }
 
+.td-sidebar-nav>.td-sidebar-nav__section {
+    padding-inline-start: 0;
+}
+
 // Foldable sidebar menu
 nav.foldable-nav {
 
@@ -224,6 +228,10 @@ nav.foldable-nav {
     .dropdown-menu {
         left: auto !important;
         right: 0 !important;
+    }
+    
+    .dropdown {
+        padding-inline-start: 1rem;
     }
 }
 

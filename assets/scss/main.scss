@@ -84,6 +84,10 @@ p > a {
 // Pagefind search styling 
 #search {
     width: 100%;
+       
+    @include media-breakpoint-down(md) {
+        margin-inline-end: 1rem;
+      }
 }
 
 .pagefind-ui__result-excerpt {

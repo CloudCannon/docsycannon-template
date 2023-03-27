@@ -7,12 +7,12 @@
     id="td-section-nav">
     <div class="d-flex justify-content-between">
       {{ if  (gt (len .Site.Home.Translations) 0) -}}
-        <div class="nav-item dropdown d-block d-lg-none px-3">
+        <div class="nav-item dropdown d-block d-lg-none">
           {{ partial "navbar-lang-selector.html" . }}
         </div>
       {{ end -}}
       {{ if (gt (len .Site.Data.versioning.versions) 1) -}}
-        <div class="nav-item dropdown d-block d-lg-none px-3">
+        <div class="nav-item dropdown d-block d-lg-none">
           {{ partial "navbar-version-selector.html" . -}}
         </div>
       {{ end }}
