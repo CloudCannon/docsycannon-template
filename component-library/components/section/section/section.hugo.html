@@ -17,13 +17,9 @@
 			{{ end }}
 			<div class="row">
 				<div class="col">
-					{{ if .text }}
+					{{ with .text }}
 						<div class="row lead mb-5">
-							{{ if eq .Page.File.Ext "md" }}
-								{{ .text | markdownify }}
-							{{ else }}
-								{{ .text | htmlUnescape | safeHTML }}
-							{{ end }}
+							{{ . | markdownify }}
 						</div>
 					{{ end }}
 					<div class="row {{ $type }} align-items-center justify-content-center">

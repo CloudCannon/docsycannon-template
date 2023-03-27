@@ -22,13 +22,11 @@
           {{ range .button }}
             {{ partial "bookshop" (slice "generic/button" . )}}
           {{ end }}
-          <div class="my-4 lead">
-            {{ if eq .Page.File.Ext "md" }}
-              {{ .text | markdownify }}
-            {{ else }}
-              {{ .text | htmlUnescape | safeHTML }}
-            {{ end }}
-          </div>
+          {{ with .text }}
+            <div class="my-4 lead">
+              {{ . | markdownify }}
+            </div>
+          {{ end }}
             {{ with .link_down }}
               {{ partial "bookshop" (slice "generic/link_down" . )}}
             {{ end }}
