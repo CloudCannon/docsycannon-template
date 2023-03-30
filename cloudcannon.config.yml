@@ -40,7 +40,7 @@ _editables: &md_editables
 
 _snippets:
   alert:
-    template: hugo_paired_shortcode_named_args
+    template: hugo_paired_markdown_shortcode_named_args
     inline: true
     definitions:
       shortcode_name: alert
@@ -484,7 +484,7 @@ _snippets:
       src:
         label: Source
         comment: The OpenAPI YAML or JSON file used as the source file.
-        type: file  
+        type: file
 
 # Collections are related sets of content files, typically grouped by folder.
 # Here you can define your collections, as well as any
