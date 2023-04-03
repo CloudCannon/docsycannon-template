@@ -486,6 +486,18 @@ _snippets:
         comment: The OpenAPI YAML or JSON file used as the source file.
         type: file
 
+  custom_snippet:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    preview:
+      text: My Custom Snippet
+    definitions:
+      shortcode_name: custom_shortcode
+      content_key: custom_key
+      named_args:
+        - editor_key: arg
+          type: string
+
 # Collections are related sets of content files, typically grouped by folder.
 # Here you can define your collections, as well as any
 # CloudCannon configuration specific to those collections.
