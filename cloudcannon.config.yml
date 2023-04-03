@@ -493,7 +493,7 @@ _snippets:
       text: My Custom Snippet
     definitions:
       shortcode_name: custom_shortcode
-      content_key: custom_key
+      content_key: Inner
       named_args:
         - editor_key: arg
           type: string
