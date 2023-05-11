@@ -25,7 +25,7 @@
     "postcss-cli": "^10.1.0"
   },
   "dependencies": {
-    "@bookshop/browser": "3.4.0",
+    "@bookshop/browser": "3.5.0",
     "@bookshop/generate": "3.4.0",
     "@bookshop/hugo-engine": "3.4.0"
   }
