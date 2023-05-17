@@ -23,5 +23,3 @@ A simple way to get started is to use this project as a template, which gives yo
 4\. <a target="_blank" rel="noopener" href="https://cloudcannon.com/community/learn/hugo-cms---get-started-with-cloudcannon">Build your site</a>.
 
 Once you have a copy of the template live on CloudCannon, navigate to <a target="_blank" rel="noopener" href="https://app.cloudcannon.com/editor">CloudCannon's CMS</a>&nbsp;and edit the contents to suit your needs.
-
-{{< custom_shortcode arg="asdasd" >}}asdasd{{< /custom_shortcode >}}
