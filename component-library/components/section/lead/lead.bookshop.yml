@@ -9,19 +9,19 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  color: primary
+  color: dark
   height: auto
-  text: This is a lead section.
-  heading: This can have a heading.
-  id: Lead_ID
+  text:
+  heading:
+  id:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  color: primary
+  color: dark
   height: auto
   text: This is a lead section.
   heading: This can have a heading.
-  id: Lead_ID
+  id: lead_id
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:

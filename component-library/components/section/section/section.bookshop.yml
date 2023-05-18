@@ -9,12 +9,12 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  heading: This is another section
-  text: Inner text
+  heading:
+  text:
   color: light
   height: auto
   type: true
-  id: Section_ID
+  id: section_id
   feature: [bookshop:simple/feature]
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -24,7 +24,7 @@ preview:
   color: warning
   height: auto
   type: true
-  id: Section_ID
+  id: section_id
   feature:
     - bookshop:simple/feature
     - bookshop:simple/feature
@@ -66,8 +66,7 @@ _inputs:
     comment: The text content for the section. 
     type: markdown
   type:
-    label: Section Type
-    comment: Horizontal?
+    label: Horizontal?
     type: checkbox
   id:
     label: ID
