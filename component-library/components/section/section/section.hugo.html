@@ -13,12 +13,12 @@
 	<div class="container-xl">
 		<div class="col">
 			{{ with .heading }}
-					<h1 class="text-center mb-4">{{ . }}</h1>
+					<h1 class="text-center mb-3">{{ . }}</h1>
 			{{ end }}
 			<div class="row">
 				<div class="col">
 					{{ with .text }}
-						<div class="row lead mb-5">
+						<div class="row lead mb-3">
 							{{ . | markdownify }}
 						</div>
 					{{ end }}
