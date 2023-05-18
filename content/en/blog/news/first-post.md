@@ -26,6 +26,6 @@ You can include images in your blog posts, using the markdown toolbar in the Clo
 
 <img src="/featured-sunset-get.png" width="1697" />
 
-
+You can also use the \`Figure\` snippet to include an image with more options. Options include an editable title, caption, attribution, link, and size controls.
 
 {{< figure src="/images/featured-sunset-get.png" title="A different way to include images." alt="An example blog image." caption="A blog image with more options." attr="Photo: Riona MacNamara / CC-BY-CA" >}}
