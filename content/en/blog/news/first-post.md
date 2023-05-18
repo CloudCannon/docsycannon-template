@@ -20,18 +20,12 @@ The front matter specifies the date of the blog post, its title, a short descrip
 
 ## Including images
 
-Here's an image (`featured-sunset-get.png`) that includes a byline and a caption.
+You can include images in your blog posts, using the markdown toolbar in the CloudCannon content editor.
 
-The front matter of this post specifies properties to be assigned to all image resources:
+<img src="/screenshot-2023-05-18-at-12-21-06-pm.png" width="2330" height="76" />
 
-```
-resources:
-- src: "**.{png,jpg}"
-  title: "Image #:counter"
-  params:
-    byline: "Photo: Riona MacNamara / CC-BY-CA"
-```
+<img src="/featured-sunset-get.png" width="1697" />
 
-To include the image in a page, specify its details like this:
 
-The image will be rendered at the size and byline specified in the front matter.
+
+{{< figure src="/images/featured-sunset-get.png" title="A different way to include images." alt="An example blog image." caption="A blog image with more options." attr="Photo: Riona MacNamara / CC-BY-CA" >}}
