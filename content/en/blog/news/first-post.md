@@ -34,10 +34,4 @@ resources:
 
 To include the image in a page, specify its details like this:
 
-```
-{{< imgproc sunset Fill "600x300" >}}
-Fetch and scale an image in the upcoming Hugo 0.43.
-{{< /imgproc >}}
-```
-
 The image will be rendered at the size and byline specified in the front matter.
