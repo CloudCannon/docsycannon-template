@@ -7,7 +7,7 @@ menu:
     weight: 20
 ---
 {{% pageinfo color="primary" %}}
-This is a placeholder page that shows you how to use this template site.
+This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
 
 This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project.

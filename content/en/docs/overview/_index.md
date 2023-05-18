@@ -10,7 +10,7 @@ description: >
 ---
 
 {{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
+This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
 
 
