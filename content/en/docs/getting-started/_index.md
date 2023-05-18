@@ -1,25 +1,38 @@
 ---
 _schema: index
-title: Getting Started
-linkTitle: Getting Started
-description: How to get started using the DocsyCannon template
-weight: 1
-categories:
-  - Getting Started
-tags:
-  - Getting Started
-  - Forking
-  - Template
-  - Installation
+title: "Getting Started"
+linkTitle: "Getting Started"
+weight: 2
+categories: ["Examples", "Placeholders"]
+tags: ["test","docs"] 
+description: >
+  What does your user need to know to try your project?
 ---
-A simple way to get started is to use this project as a template, which gives you a site project that is set up and ready to use. To do this:
 
-1\. Click **Use this template** on <a target="_blank" rel="noopener" href="https://github.com/tomrcc/docsycannon-template">GitHub</a>
+{{% pageinfo %}}
+This is a placeholder page that shows you how to use this template site.
+{{% /pageinfo %}}
 
-2\. Select a name for your new project and click **Create repository from template**.
+Information in this section helps your user try your project themselves.
 
-3\. [Sign up](https://app.cloudcannon.com/register?trial=cc_standard)&nbsp;for CloudCannon using their free trial period.
+* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
 
-4\. <a target="_blank" rel="noopener" href="https://cloudcannon.com/community/learn/hugo-cms---get-started-with-cloudcannon">Build your site</a>.
+* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
 
-Once you have a copy of the template live on CloudCannon, navigate to <a target="_blank" rel="noopener" href="https://app.cloudcannon.com/editor">CloudCannon's CMS</a>&nbsp;and edit the contents to suit your needs.
+Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+
+## Prerequisites
+
+Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+
+## Installation
+
+Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
+
+## Setup
+
+Is there any initial setup users need to do after installation to try your project?
+
+## Try it out!
+
+Can your users test their installation, for example by running a command or deploying a Hello World example?
