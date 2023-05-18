@@ -22,11 +22,13 @@ The front matter specifies the date of the blog post, its title, a short descrip
 
 You can include images in your blog posts, using the markdown toolbar in the CloudCannon content editor.
 
-<img src="/screenshot-2023-05-18-at-12-21-06-pm.png" width="2330" height="76" />
+<img width="2330" height="76" src="/screenshot-2023-05-18-at-12-21-06-pm.png" />
 
 
 
-<img src="/featured-sunset-get.png" width="1697" />
+<img width="1697" src="/featured-sunset-get.png" />
+
+
 
 
 
