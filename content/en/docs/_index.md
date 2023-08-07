@@ -10,13 +10,13 @@ menu:
 This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
 
-
-{{% blocks/lead color="indigo" %}}
+{{% blocks/lead height="" color="indigo" %}}
 TechOS is the OS of the future.
 
 Runs on **bare metal** in the **cloud**!
 {{% /blocks/lead %}}
 
+{{% blocks/lead height="" color="#9d3434" %}}Test{{% /blocks/lead %}}
 
 This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project.
 
