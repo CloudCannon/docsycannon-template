@@ -39,6 +39,19 @@ _editables: &md_editables
     snippet: true
 
 _snippets:
+  blocks/lead: 
+    template: hugo_paired_markdown_shortcode_named_args
+    inline: true 
+    definitions: 
+      shortcode_name: blocks/lead
+      content_key: content
+      named_args:
+        - editor_key: height
+          type: string
+          optional: true
+        - editor_key: color
+          type: string
+          optional: true
   alert:
     template: hugo_paired_markdown_shortcode_named_args
     inline: true

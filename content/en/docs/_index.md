@@ -10,6 +10,14 @@ menu:
 This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
 
+
+{{% blocks/lead color="indigo" %}}
+TechOS is the OS of the future.
+
+Runs on **bare metal** in the **cloud**!
+{{% /blocks/lead %}}
+
+
 This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project.
 
 For large documentation sets we recommend adding content under the headings in this section, though if some or all of them don’t apply to your project feel free to remove them or add your own. You can see an example of a smaller Docsy documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which lives in the [Docsy theme repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to copy its docs section.
