@@ -69,7 +69,17 @@ _snippets:
         color:
           type: select
           options:
-            values: _select_data.bootstrap_colors
+            values:
+              - blue
+              - indigo
+              - purple
+              - pink
+              - red
+              - orange
+              - yellow
+              - green
+              - teal
+              - cyan            
   alert:
     template: hugo_paired_markdown_shortcode_named_args
     inline: true
