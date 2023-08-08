@@ -67,6 +67,8 @@ _snippets:
           type: string
           optional: true
     _inputs:
+      height:
+        comment: default's to auto
       content:
         type: markdown
       color:
@@ -75,7 +77,7 @@ _snippets:
           values: _select_data.bootstrap_colors
   blocks/section: 
     template: hugo_paired_markdown_shortcode_named_args
-    inline: footer_about_disable 
+    inline: false 
     definitions: 
       shortcode_name: blocks/section
       content_key: content
@@ -92,9 +94,12 @@ _snippets:
           default: "container"
           optional: true          
     _inputs:
+      height:
+        comment: default's to auto
       content:
         type: markdown
       section_type:
+        comment: Specify “container” (the default) if you want a general container, or “row” if the section will contain columns – which must be immediate children.
         type: select
         options:
           values:
