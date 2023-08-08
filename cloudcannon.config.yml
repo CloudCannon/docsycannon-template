@@ -75,6 +75,28 @@ _snippets:
         comment: The title to use.
       content:
         type: markdown
+        options:
+          bold: true
+          format: p h1 h2 h3 h4 
+          italic: true
+          strike: true
+          subscript: true
+          superscript: true
+          underline: true
+          bulletedlist: true
+          indent: true
+          numberedlist: true
+          outdent: true
+          code: true
+          embed: true
+          horizontalrule: true
+          image: true
+          table: true
+          undo: true
+          redo: true
+          removeformat: true
+          copyformatting: true
+          snippet: true        
       url:
         comment: The URL to link to.
         type: url
@@ -98,6 +120,28 @@ _snippets:
         comment: default's to auto
       content:
         type: markdown
+        options:
+          bold: true
+          format: p h1 h2 h3 h4 
+          italic: true
+          strike: true
+          subscript: true
+          superscript: true
+          underline: true
+          bulletedlist: true
+          indent: true
+          numberedlist: true
+          outdent: true
+          code: true
+          embed: true
+          horizontalrule: true
+          image: true
+          table: true
+          undo: true
+          redo: true
+          removeformat: true
+          copyformatting: true
+          snippet: true        
       color:
         type: select
         options:
@@ -125,6 +169,28 @@ _snippets:
         comment: default's to auto
       content:
         type: markdown
+        options:
+          bold: true
+          format: p h1 h2 h3 h4 
+          italic: true
+          strike: true
+          subscript: true
+          superscript: true
+          underline: true
+          bulletedlist: true
+          indent: true
+          numberedlist: true
+          outdent: true
+          code: true
+          embed: true
+          horizontalrule: true
+          image: true
+          table: true
+          undo: true
+          redo: true
+          removeformat: true
+          copyformatting: true
+          snippet: true
       section_type:
         comment: Specify “container” (the default) if you want a general container, or “row” if the section will contain columns – which must be immediate children.
         type: select
