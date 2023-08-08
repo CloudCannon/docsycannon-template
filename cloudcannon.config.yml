@@ -22,6 +22,12 @@ _select_data:
     - danger
     - light
     - dark
+  height_options:
+    - min 
+    - med
+    - max
+    - full 
+    - auto
 
 _editables: &md_editables
   text:
@@ -130,6 +136,9 @@ _snippets:
   blocks/lead: 
     template: hugo_paired_markdown_shortcode_named_args
     inline: false 
+    preview:
+      subtext:
+        - The blocks/lead block shortcode is a simple lead/title block with centred text and an arrow down pointing to the next section.
     definitions: 
       shortcode_name: blocks/lead
       content_key: content
@@ -143,6 +152,9 @@ _snippets:
     _inputs:
       height:
         comment: default's to auto
+        type: select
+        options:
+          values: _select_data.height_options
       content:
         type: markdown
         options:
@@ -192,6 +204,9 @@ _snippets:
     _inputs:
       height:
         comment: default's to auto
+        type: select
+        options:
+          values: _select_data.height_options
       content:
         type: markdown
         options:
