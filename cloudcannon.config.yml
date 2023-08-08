@@ -1,6 +1,19 @@
 # Read the CloudCannon documentation for more information on how to use this file:
 # https://cloudcannon.com/documentation/articles/setting-global-configuration/?ssg=Hugo
 
+_select_data:
+  bootstrap_colors:
+    - blue
+    - indigo
+    - purple
+    - pink
+    - red
+    - orange
+    - yellow
+    - green
+    - teal
+    - cyan
+    
 _editables: &md_editables
   text:
     italic: true
@@ -805,15 +818,4 @@ _inputs:
     comment: Sets the weight of the menu item. The higher the weight, the further down the menu item is.
     type: number
 
-_select_data:
-  bootstrap_colors:
-    - blue
-    - indigo
-    - purple
-    - pink
-    - red
-    - orange
-    - yellow
-    - green
-    - teal
-    - cyan
+
