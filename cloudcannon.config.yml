@@ -145,6 +145,7 @@ _snippets:
       named_args:
         - editor_key: height
           type: string
+          default: "auti"
           optional: true
         - editor_key: color
           type: string
