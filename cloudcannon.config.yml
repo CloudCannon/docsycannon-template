@@ -53,6 +53,33 @@ _editables: &md_editables
     snippet: true
 
 _snippets:
+  blocks/feature: 
+    template: hugo_paired_markdown_shortcode_named_args
+    inline: false 
+    definitions: 
+      shortcode_name: blocks/feature
+      content_key: content
+      named_args:
+        - editor_key: title
+          type: string
+          optional: true
+        - editor_key: url
+          type: string
+          optional: true
+        - editor_key: icon
+          source_key: type
+          type: string
+          optional: true          
+    _inputs:
+      title:
+        comment: The title to use.
+      content:
+        type: markdown
+      url:
+        comment: The URL to link to.
+        type: url
+      icon:
+        comment: The icon class to use. You can find the icons avaliable at fontawesome.com/icons/
   blocks/lead: 
     template: hugo_paired_markdown_shortcode_named_args
     inline: false 

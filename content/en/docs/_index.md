@@ -22,6 +22,18 @@ Test
 asdfasd
 {{% /blocks/lead %}}
 
+{{< blocks/section color="dark" type="row" >}}
+{{% blocks/feature icon="fa-lightbulb" title="Fastest OS **on the planet**!" %}}
+The new **TechOS** operating system is an open source project. It is a new project, but with grand ambitions.
+Please follow this space for updates!
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa-brands fa-github" title="Contributions welcome!" url="https://github.com/gohugoio/hugo" %}}
+We do a [Pull Request](https://github.com/gohugoio/hugo/pulls) contributions workflow on **GitHub**. New users are always welcome!
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa-brands fa-twitter" title="Follow us on Twitter!" url="https://twitter.com/GoHugoIO" %}}
+For announcement of latest features etc.
+{{% /blocks/feature %}}
+{{< /blocks/section >}}
 This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project.
 
 For large documentation sets we recommend adding content under the headings in this section, though if some or all of them don’t apply to your project feel free to remove them or add your own. You can see an example of a smaller Docsy documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which lives in the [Docsy theme repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to copy its docs section.
