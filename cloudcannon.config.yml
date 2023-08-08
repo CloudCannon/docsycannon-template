@@ -67,13 +67,49 @@ _editables: &md_editables
     snippet: true
 
 _snippets:
+  blocks/cover:
+    template: hugo_paired_markdown_shortcode_named_args
+    inline: false
+    subtext:
+      - key: message
+      - The blocks/cover shortcode creates a landing page type of block that fills the top of the page. To set the background image, place an image with the word “background” in the name in the page’s Page Bundle. For example, in our the example site the background image in the home page’s cover block is featured-background.jpg, in the same directory.
+    definitions: 
+      shortcode_name: blocks/cover
+      content_key: content
+      named_args:
+        - editor_key: title
+          type: string 
+          optional: true
+        - editor_key: image_anchor
+          type: string    
+          optional: true
+        - editor_key: height
+          type: string  
+          optional: false                                
+        - editor_key: color
+          type: string   
+          optional: false                                
+        - editor_key: byline
+          type: string   
+          optional: true                                
+    _inputs:
+      title:
+        comment: The main display title for the block.
+      color:
+        type: height
+        options:
+          values: _select_data.bootstrap_colors
+      color:
+        type: select
+        options:
+          values: _select_data.bootstrap_colors
   blocks/link-down: 
     template: hugo_shortcode_named_args
     inline: true 
     preview:
       subtext:
         - key: message
-        - The blocks/link-down shortcode creates a navigation link down to the next section. It’s meant to be used in combination with the other blocks shortcodes.
+        - The blocks/link-down shortcode creates a navigation link down to the next section. It’s meant to be used in combination with the other blocks shortcodes. 
     definitions: 
       shortcode_name: blocks/link-down
       named_args:
