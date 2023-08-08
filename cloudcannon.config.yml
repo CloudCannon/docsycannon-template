@@ -61,7 +61,7 @@ _editables: &md_editables
     snippet: true
 
 _snippets:
-  blocks/feature: 
+  blocks/link-down: 
     template: hugo_shortcode_named_args
     inline: true 
     preview:
@@ -69,7 +69,7 @@ _snippets:
         - key: message
         - The blocks/link-down shortcode creates a navigation link down to the next section. It’s meant to be used in combination with the other blocks shortcodes.
     definitions: 
-      shortcode_name: blocks/feature
+      shortcode_name: blocks/link-down
       named_args:
         - editor_key: color
           type: string 
