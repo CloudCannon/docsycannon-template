@@ -13,7 +13,7 @@ _select_data:
     - green
     - teal
     - cyan
-    
+
 _editables: &md_editables
   text:
     italic: true
@@ -580,7 +580,6 @@ collections_config:
           path: '[relative_base_path]/{title|slugify}/_index.md'
     _enabled_editors:
       - content
-      - visual
   data:
     path: data
     icon: save
