@@ -65,21 +65,11 @@ _snippets:
         - editor_key: color
           type: string
           optional: true
-      _inputs:
-        color:
-          type: select
-          options:
-            values:
-              - blue
-              - indigo
-              - purple
-              - pink
-              - red
-              - orange
-              - yellow
-              - green
-              - teal
-              - cyan            
+    _inputs:
+      color:
+        type: select
+        options:
+          values: _select_data.bootstrap_colors
   alert:
     template: hugo_paired_markdown_shortcode_named_args
     inline: true
