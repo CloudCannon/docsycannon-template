@@ -99,10 +99,6 @@ _snippets:
         type: height
         options:
           values: _select_data.bootstrap_colors
-      color:
-        type: select
-        options:
-          values: _select_data.bootstrap_colors
   blocks/link-down: 
     template: hugo_shortcode_named_args
     inline: true 
