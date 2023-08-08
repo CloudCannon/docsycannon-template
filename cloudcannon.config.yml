@@ -3,6 +3,7 @@
 
 _select_data:
   bootstrap_colors:
+    - default
     - blue
     - indigo
     - purple
